@@ -1,0 +1,15 @@
+{
+  "FolderOrderSettings":[
+    {"name":"sprites","order":4,"path":"folders/sprites.yy",},
+  ],
+  "ResourceOrderSettings":[
+    {"name":"incoming_text_chatbox","order":2,"path":"sprites/incoming_text_chatbox/incoming_text_chatbox.yy",},
+    {"name":"menuBackground2","order":1,"path":"sprites/menuBackground2/menuBackground2.yy",},
+    {"name":"spr_player_spk_happy","order":8,"path":"sprites/spr_player_spk_happy/spr_player_spk_happy.yy",},
+    {"name":"spr_player_spk","order":3,"path":"sprites/spr_player_spk/spr_player_spk.yy",},
+    {"name":"spr_speakblock","order":4,"path":"sprites/spr_speakblock/spr_speakblock.yy",},
+    {"name":"spr_textbox_arrow","order":5,"path":"sprites/spr_textbox_arrow/spr_textbox_arrow.yy",},
+    {"name":"Sprite1","order":6,"path":"sprites/Sprite1/Sprite1.yy",},
+    {"name":"Sprite7","order":7,"path":"sprites/Sprite7/Sprite7.yy",},
+  ],
+}

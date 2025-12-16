@@ -9,8 +9,8 @@
   "name":"obj_textbox",
   "overriddenProperties":[],
   "parent":{
-    "name":"tutorial dialogue",
-    "path":"tutorial dialogue.yyp",
+    "name":"2d game gerudos",
+    "path":"2d game gerudos.yyp",
   },
   "parentObjectId":null,
   "persistent":false,

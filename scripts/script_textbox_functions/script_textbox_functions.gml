@@ -9,15 +9,47 @@ function scr_set_default_for_text() {
 }
 
 /// @param text
+/// @param [character]
+
+enum SpriteId
+{
+	Cat,
+	Alien,
+}
+
 function scr_txt(_text){
 	
 	scr_set_default_for_text()
 	
 	text[page_number] = _text;
+	
+	//get character info
+	if argument_count > 1 {
+		switch(argument[1])
+			{
+			case SpriteId.Cat:
+				speaker_sprite[page_number] = spr_player_cat;
+				txtb_spr[page_number] = menuBackground;
+				break;
+				
+			case SpriteId.Alien:
+				speaker_sprite[page_number] = spr_player_alien;
+				txtb_spr[page_number] = menuBackground2;
+				break;
+			}	
+		}
+		
+	//side the character is on
+	if argument_count > 2 {
+		speaker_side[page_number] = argument[2];
+		}
 
 	page_number++;
 
 }
+
+
+
 
 
 /// @param option

@@ -1,1 +1,1 @@
-text_id = "exit";
+text_id = DialogId.Stella;

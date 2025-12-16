@@ -592,8 +592,8 @@
   "maintainGms1Font":false,
   "name":"font_random",
   "parent":{
-    "name":"tutorial dialogue",
-    "path":"tutorial dialogue.yyp",
+    "name":"2d game gerudos",
+    "path":"2d game gerudos.yyp",
   },
   "pointRounding":0,
   "ranges":[

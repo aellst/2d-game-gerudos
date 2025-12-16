@@ -12,8 +12,8 @@
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
-    "name":"tutorial dialogue",
-    "path":"tutorial dialogue.yyp",
+    "name":"2d game gerudos",
+    "path":"2d game gerudos.yyp",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

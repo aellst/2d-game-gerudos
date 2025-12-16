@@ -1,6 +1,6 @@
-accept_key = keyboard_check_pressed(vk_space);
+accept_key = keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or mouse_check_button_pressed(mb_left);
 
-textbox_x = camera_get_view_x(view_camera[0]) - 65;
+textbox_x = camera_get_view_x(view_camera[0]);
 textbox_y = camera_get_view_y(view_camera[0]) + 448;
 
 //setup
@@ -21,11 +21,18 @@ if setup == false
 		
 		//get the x position for the textbox
 			//character on the left
-			text_x_offset[p] = 321;
-			portrait_x_offset[p] = 128; 
-		
+			text_x_offset[p] = 291;
+			portrait_x_offset[p] = 140; 
+			//character on the right
+			if speaker_side[p] == -1 {
+				text_x_offset[p] = 140;
+				portrait_x_offset[p] = 1039;
+			}
+				
 			//no character (center the textbox)
-			text_x_offset[p] = 195;
+			if speaker_sprite[p] == noone {
+			text_x_offset[p] = 140;
+			}
 			
 			
 		//setting individual characters and finding where the lines of text should break
@@ -139,9 +146,20 @@ if accept_key
 //draw textbox
 var _txtb_x = textbox_x + text_x_offset[page];
 var _txtb_y = textbox_y;
-txtb_img+= txtb_img_spd;
+txtb_img += txtb_img_spd;
 txtb_spr_w = sprite_get_width(txtb_spr[page]);
 txtb_spr_h = sprite_get_height(txtb_spr[page]);
+//draw the speaker
+if speaker_sprite[page] != noone 
+	{
+	sprite_index = speaker_sprite[page];
+	if draw_char == text_length[page] {image_index = 0};
+	var _speaker_x = textbox_x + portrait_x_offset[page];
+	if speaker_side[page] == -1 {_speaker_x += sprite_width};
+	//draw the speaker
+	draw_sprite_ext(txtb_spr[page], txtb_img, textbox_x + portrait_x_offset[page], textbox_y, textbox_height/txtb_spr_w, textbox_height/txtb_spr_h, 0, c_white, 1);
+	draw_sprite_ext(sprite_index, image_index, _speaker_x, textbox_y, speaker_side[page], 1, 0, c_white, 1);
+	}
 //back of the textbox
 draw_sprite_ext(txtb_spr[page], txtb_img, _txtb_x, _txtb_y, textbox_width/txtb_spr_w, textbox_height/txtb_spr_h, 0, c_white, 1);
 
@@ -151,7 +169,7 @@ if draw_char == text_length[page] && page == page_number - 1
 	{
 		
 	//option selection
-	option_pos += keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up);
+	option_pos += (keyboard_check_pressed(vk_down) or keyboard_check_pressed(ord("S"))) - (keyboard_check_pressed(vk_up) or keyboard_check_pressed(ord("W")));
 	option_pos = clamp(option_pos, 0, option_number-1);
 		
 	//draw the options

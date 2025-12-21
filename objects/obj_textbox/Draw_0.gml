@@ -202,3 +202,19 @@ for (var c = 0; c < draw_char; c++)
 	draw_text(char_x[c, page], char_y[c, page], char[c, page]);
 
 	}
+	
+////draw messages
+//for (var i = 0; i < array_length(messages); i++) {
+	
+//	var message1 = messages[i];
+	
+//	if sender == self
+//		{
+//		//draw right
+//		}
+//	else
+//		{
+//		//draw left
+//		}
+	
+//	}

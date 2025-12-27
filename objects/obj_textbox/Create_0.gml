@@ -33,18 +33,3 @@ setup = false;
 //effects
 scr_set_default_for_text()
 last_free_space = 0;
-
-////struct
-//var message1 = {
-//	text: "hello",
-//	sender: "Franka"
-//	}
-	
-// var message2 = {
-//	text: "helloooo",
-//	sender: self
-//	}
-	
-//messages = [];
-//array_push(messages, message1);
-//array_push(messages, message2);

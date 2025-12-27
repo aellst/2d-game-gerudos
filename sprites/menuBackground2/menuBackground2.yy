@@ -42,7 +42,7 @@
     ],
     "top":9,
   },
-  "origin":0,
+  "origin":2,
   "parent":{
     "name":"sprites",
     "path":"folders/sprites.yy",
@@ -94,7 +94,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
+    "xorigin":58,
     "yorigin":0,
   },
   "swatchColours":null,

@@ -13,8 +13,8 @@
   ],
   "name":"Room2",
   "parent":{
-    "name":"2d game gerudos",
-    "path":"2d game gerudos.yyp",
+    "name":"rooms",
+    "path":"folders/rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

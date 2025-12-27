@@ -191,8 +191,8 @@
   "maintainGms1Font":false,
   "name":"Font2",
   "parent":{
-    "name":"2d game gerudos",
-    "path":"2d game gerudos.yyp",
+    "name":"fonts",
+    "path":"folders/fonts.yy",
   },
   "pointRounding":0,
   "ranges":[

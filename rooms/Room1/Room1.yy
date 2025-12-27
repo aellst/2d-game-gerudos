@@ -10,15 +10,19 @@
     {"name":"inst_C599DF0","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_2C61C716","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_2DA88A83","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_6801C973","path":"rooms/Room1/Room1.yy",},
   ],
   "isDnd":false,
   "layers":[
-    {"$GMRAssetLayer":"","%Name":"Assets_1","assets":[],"depth":0,"effectEnabled":true,"effectType":null,"gridX":20,"gridY":20,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Assets_1","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRAssetLayer":"","%Name":"Assets_1","assets":[
+        {"$GMRSpriteGraphic":"v1","%Name":"graphic_2BF1DAD5","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_2BF1DAD5","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":6.5172415,"scaleY":1.0,"spriteId":{"name":"menuBackground2","path":"sprites/menuBackground2/menuBackground2.yy",},"x":1180.0,"y":440.0,},
+      ],"depth":0,"effectEnabled":true,"effectType":null,"gridX":20,"gridY":20,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Assets_1","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_31F284E4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":true,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_31F284E4","objectId":{"name":"titleMenu","path":"objects/titleMenu/titleMenu.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":608.0,"y":224.0,},
         {"$GMRInstance":"v4","%Name":"inst_C599DF0","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_C599DF0","objectId":{"name":"obj_speakblock","path":"objects/obj_speakblock/obj_speakblock.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.0,"scaleY":3.0,"x":128.0,"y":96.0,},
         {"$GMRInstance":"v4","%Name":"inst_2C61C716","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2C61C716","objectId":{"name":"obj_speakblock","path":"objects/obj_speakblock/obj_speakblock.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.0,"scaleY":3.0,"x":128.0,"y":160.0,},
         {"$GMRInstance":"v4","%Name":"inst_2DA88A83","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2DA88A83","objectId":{"name":"obj_speakblock","path":"objects/obj_speakblock/obj_speakblock.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.0,"scaleY":3.0,"x":128.0,"y":224.0,},
+        {"$GMRInstance":"v4","%Name":"inst_6801C973","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6801C973","objectId":{"name":"obj_textboxNEW","path":"objects/obj_textboxNEW/obj_textboxNEW.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":704.0,"y":480.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tiles_2","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_2","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":45,"SerialiseWidth":80,"TileCompressedData":[
           406,513,514,515,516,517,506,507,508,509,510,511,512,513,514,515,516,517,506,507,508,509,510,511,512,
@@ -258,8 +262,8 @@
   ],
   "name":"Room1",
   "parent":{
-    "name":"2d game gerudos",
-    "path":"2d game gerudos.yyp",
+    "name":"rooms",
+    "path":"folders/rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

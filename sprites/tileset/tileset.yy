@@ -43,8 +43,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"2d game gerudos",
-    "path":"2d game gerudos.yyp",
+    "name":"tilesets",
+    "path":"folders/tilesets.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

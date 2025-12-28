@@ -5,19 +5,19 @@ depth = -999
 chatStella = [];
 
 var message1_s = {
-	text: "Hi! Party at mine, you coming?",
+	line: "Hi! Party at mine, you coming?",
 	sender: "gray"
 	}
 var message2_s = {
-	text: "When?",
+	line: "When?",
 	sender: "blue"
 	}
 var message3_s = {
-	text: "Tonight!",
+	line: "Tonight!",
 	sender: "gray"
 	}
 var message4_s = {
-	text: "Yes, tonight, when?",
+	line: "Yes, tonight, when?",
 	sender: "blue"
 	}
 	
@@ -25,6 +25,11 @@ array_push(chatStella, message1_s);
 array_push(chatStella, message2_s);
 array_push(chatStella, message3_s);
 array_push(chatStella, message4_s);
+
+//chat parameters
+visible_count = 0;
+timer = 120;
+scroll_offset = 0;
 
 //textbox parameters
 textbox_width = 379;
@@ -34,9 +39,10 @@ line_sep = 36;
 line_width = textbox_width - border*2;
 txtb_img = 0;
 txtb_img_spd = 30/60;
-txtb_spr = menuBackground;
-text_x_offset = [];
-text_y_offset = [];
+txtb_spr_gray = menuBackground2;
+txtb_spr_blue = menuBackground;
+//text_x_offset = [];
+//text_y_offset = [];
 
 //text
 page = 0; 

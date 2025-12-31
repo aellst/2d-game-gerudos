@@ -71,17 +71,38 @@ for (var i = visible_count - 1; i >= 0; i--) //i have to make it so that the arg
 		draw_text(_left_edge + border, _current_y + border, _struct.line);
 		
 		_current_y -= _spacing;
-		
-		
-		////draw the textbox
-		//var txtb_w = string_width(chatStella[message1_s.text] + border*2); //again, i have to make the array item be in a variable that changes
-		//draw_sprite_ext(txtb_spr, txtb_img, textbox_x + text_x_offset[page], textbox_y + text_y_offset[page], txtb_w/txtb_spr_w, textbox_height/txtb_spr_h, 0, c_white, 1);
-			
-		////draw the text
-		//var _drawtext = string_copy(chatStella[message1_s.text], 1, draw_char);
-		//draw_text_ext(textbox_x + text_x_offset[page] + border, textbox_y + text_y_offset[page] + border, _drawtext, line_sep, line_width)
-		
+
 	}
+	
+	
+	//options (not working)
+	if (showing_options) {
+		var _node_with_options = chatStellaData[$ chatStella[visible_count-1].node_id];
+		var _opts = _node_with_options.options;
+		
+		var _box_x = textbox_x + 379;
+		var _box_y = textbox_y + 507;
+		var _box_w = 673;
+		var _box_h = 205;
+		
+		draw_sprite_stretched(menuBackgroundWhite, 0, _box_x, _box_y, _box_w, _box_h);
+		
+		draw_set_halign(fa_left);
+		draw_set_valign(fa_top);
+		
+		var _padding_inner = 30;
+		var _line_height = 40;
+		
+		for (var j = 0; j < array_length(_opts); j++) {
+			var _opt_text = string(j + 1) + ". " + _opts[j].text; 
+			var _text_x = _box_x + _padding_inner;
+			var _text_y = _box_y + _padding_inner + (j*_line_height);
+			
+			draw_set_colour(c_white);
+			draw_text(_text_x, _text_y, _opt_text);
+		}
+	}
+			
 
 
 ////draw the options

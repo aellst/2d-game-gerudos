@@ -44,6 +44,7 @@
     {"id":{"name":"incoming_text_chatbox","path":"sprites/incoming_text_chatbox/incoming_text_chatbox.yy",},},
     {"id":{"name":"menuBackground","path":"sprites/menuBackground/menuBackground.yy",},},
     {"id":{"name":"menuBackground2","path":"sprites/menuBackground2/menuBackground2.yy",},},
+    {"id":{"name":"menuBackgroundWhite","path":"sprites/menuBackgroundWhite/menuBackgroundWhite.yy",},},
     {"id":{"name":"spr_player_alien","path":"sprites/spr_player_alien/spr_player_alien.yy",},},
     {"id":{"name":"spr_player_cat","path":"sprites/spr_player_cat/spr_player_cat.yy",},},
     {"id":{"name":"spr_speakblock","path":"sprites/spr_speakblock/spr_speakblock.yy",},},

@@ -15,6 +15,7 @@
     {"name":"script_textbox_functions","order":1,"path":"scripts/script_textbox_functions/script_textbox_functions.yy",},
     {"name":"incoming_text_chatbox","order":2,"path":"sprites/incoming_text_chatbox/incoming_text_chatbox.yy",},
     {"name":"menuBackground2","order":1,"path":"sprites/menuBackground2/menuBackground2.yy",},
+    {"name":"menuBackgroundWhite","order":9,"path":"sprites/menuBackgroundWhite/menuBackgroundWhite.yy",},
     {"name":"spr_player_alien","order":8,"path":"sprites/spr_player_alien/spr_player_alien.yy",},
     {"name":"spr_player_cat","order":7,"path":"sprites/spr_player_cat/spr_player_cat.yy",},
     {"name":"spr_speakblock","order":4,"path":"sprites/spr_speakblock/spr_speakblock.yy",},

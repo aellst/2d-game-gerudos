@@ -27,7 +27,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.0.207",
+    "IDEVersion":"2024.14.2.213",
   },
   "name":"2d game gerudos",
   "resources":[
@@ -37,6 +37,7 @@
     {"id":{"name":"obj_textbox","path":"objects/obj_textbox/obj_textbox.yy",},},
     {"id":{"name":"obj_textboxNEW","path":"objects/obj_textboxNEW/obj_textboxNEW.yy",},},
     {"id":{"name":"titleMenu","path":"objects/titleMenu/titleMenu.yy",},},
+    {"id":{"name":"Room_End","path":"rooms/Room_End/Room_End.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"id":{"name":"script_game_text","path":"scripts/script_game_text/script_game_text.yy",},},
@@ -61,6 +62,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
+    {"roomId":{"name":"Room_End","path":"rooms/Room_End/Room_End.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

@@ -1,7 +1,7 @@
 accept_key = keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or mouse_check_button_pressed(mb_left);
 
 textbox_x = camera_get_view_x(view_camera[0]);
-textbox_y = camera_get_view_y(view_camera[0]) + 439;
+textbox_y = camera_get_view_y(view_camera[0])+ 439;
 
 var _current_y = textbox_y;
 var _spacing = 10;
@@ -75,33 +75,55 @@ for (var i = visible_count - 1; i >= 0; i--) //i have to make it so that the arg
 	}
 	
 	
-	//options (not working)
-	if (showing_options) {
-		var _node_with_options = chatStellaData[$ chatStella[visible_count-1].node_id];
-		var _opts = _node_with_options.options;
+	//---------------options-----------------------
+	
+	if showing_options {
+		var _cam_x = camera_get_view_x(view_camera[0]);
+		var _cam_y = camera_get_view_y(view_camera[0]);
 		
-		var _box_x = textbox_x + 379;
-		var _box_y = textbox_y + 507;
-		var _box_w = 673;
-		var _box_h = 205;
+		var _bx = _cam_x + 379;
+		var _by = _cam_y + 450;
+		var _bw = 801;
+		var _bh = 105;
 		
-		draw_sprite_stretched(menuBackgroundWhite, 0, _box_x, _box_y, _box_w, _box_h);
+		draw_sprite_stretched(menuBackgroundWhite, 0, _bx, _by, _bw, _bh);
 		
 		draw_set_halign(fa_left);
-		draw_set_valign(fa_top);
+		draw_set_colour(c_black);
 		
-		var _padding_inner = 30;
-		var _line_height = 40;
-		
-		for (var j = 0; j < array_length(_opts); j++) {
-			var _opt_text = string(j + 1) + ". " + _opts[j].text; 
-			var _text_x = _box_x + _padding_inner;
-			var _text_y = _box_y + _padding_inner + (j*_line_height);
+		var _opts = chatStella[visible_count - 1].options;
+		for (var i = 0; i < array_length(_opts); i++) {
+			draw_text(_bx + 10, _by + 10 + (i*40), "- " + _opts[i].text); }
 			
-			draw_set_colour(c_white);
-			draw_text(_text_x, _text_y, _opt_text);
-		}
+		draw_set_colour(c_white);
 	}
+	
+	//if (showing_options) {
+	//	var _node_with_options = chatStellaData[$ chatStella[visible_count-1].node_id];
+	//	var _opts = _node_with_options.options;
+		
+	//	var _box_x = textbox_x + 379;
+	//	var _box_y = textbox_y + 507;
+	//	var _box_w = 673;
+	//	var _box_h = 205;
+		
+	//	draw_sprite_stretched(menuBackgroundWhite, 0, _box_x, _box_y, _box_w, _box_h);
+		
+	//	draw_set_halign(fa_left);
+	//	draw_set_valign(fa_top);
+		
+	//	var _padding_inner = 30;
+	//	var _line_height = 40;
+		
+	//	for (var j = 0; j < array_length(_opts); j++) {
+	//		var _opt_text = string(j + 1) + ". " + _opts[j].text; 
+	//		var _text_x = _box_x + _padding_inner;
+	//		var _text_y = _box_y + _padding_inner + (j*_line_height);
+			
+	//		draw_set_colour(c_white);
+	//		draw_text(_text_x, _text_y, _opt_text);
+	//	}
+	//}
 			
 
 

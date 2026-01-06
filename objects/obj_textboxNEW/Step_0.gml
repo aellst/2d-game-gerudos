@@ -8,7 +8,6 @@ if (visible_count < array_length(chatStella))
 		timer = 120;
 		
 		var _last_msg = chatStella[visible_count - 1];
-		//var _data = chatStellaData[$ _last_msg.node_id];
 		
 		if (variable_struct_exists(_last_msg, "options"))
 			{
@@ -34,10 +33,8 @@ if choice_delay_timer > 0 {
 
 if (showing_options)
 {
-	//var _data = chatStellaData[$ current_node];
 	var _opts = chatStella[visible_count-1].options;
-	//var _opts = _node_with_options.options;
-	
+
 	if keyboard_check_pressed(ord("1")) {
 		array_push(chatStella, chatStellaData[$ _opts[0].target]);
 		showing_options = false; }
@@ -45,4 +42,11 @@ if (showing_options)
 		array_push(chatStella, chatStellaData[$ _opts[1].target]);
 		showing_options = false; }
 }
-	
+
+if (mouse_wheel_up()) {
+	scroll_offset -= scroll_speed;
+}
+if (mouse_wheel_down()) {
+	scroll_offset += scroll_speed;
+}
+scroll_offset = clamp(scroll_offset, 0, max_scroll);

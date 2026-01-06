@@ -91,6 +91,11 @@ chatStellaData = {
 		line: "ok, I'll see what I can do",
 		next: ""
 	},
+	"specific_friends": {
+		sender: "gray",
+		line: "Franka, Dan, Denise and Ruben. Ethan and Janiah are out of the country, so they can't come tonight.",
+		next: ""
+	},
 	
 	"dinner_node": {
 		sender: "gray",
@@ -104,9 +109,11 @@ current_node = "start";
 visible_count = 0;
 timer = 120;
 showing_options = false;
-//scroll_offset = 0;
 choice_delay_timer = 0; 
 choice_delay_max = 120;
+scroll_offset = 0;
+max_scroll = 0;
+scroll_speed = 30;
 
 //----------------textbox parameters-----------------
 textbox_width = 379;
@@ -118,8 +125,6 @@ txtb_img = 0;
 txtb_img_spd = 30/60;
 txtb_spr_gray = menuBackground2;
 txtb_spr_blue = menuBackground;
-//text_x_offset = [];
-//text_y_offset = [];
 
 //---------------------text--------------------------
 page = 0; 
@@ -130,16 +135,5 @@ draw_char = 0;
 text_spd = 1;
 
 setup = false;
-
-//function push_node(_node_id) {
-	//var _data = chatStellaData[$ _node_id];
-//	array_push(chatStella, {
-//		line: _data.line,
-//		sender: _data.sender,
-//		node_id: _node_id
-//	});
-//}
-
-//push_node(current_node);
 
 array_push(chatStella, chatStellaData.start);

@@ -20,24 +20,14 @@ if setup == false
 	draw_set_font(font_random);
 	draw_set_valign(fa_top);
 	
-		////loop through the pages
-		//for(var p = 0; p < page_number; p++)
-		//{
-			
-		//	//find how many characters are on each page and store that number in the "text_length" array
-		//	text_length[p] = string_length(text[p]);
-		
-		//	//get the x position for the textbox
-		//		//gray box
-		//		text_x_offset[p] = 1179
-		//}
-	
 	}
 
-//chat loop (IT WORKS!! very messy sorry i tried many different things, i will clean it up when it's fully done)
-for (var i = visible_count - 1; i >= 0; i--) //i have to make it so that the argument of array_lenght is depending on which chat is being pressed
+//----------------chat loop (IT WORKS!! very messy sorry i tried many different things, i will clean it up when it's fully done)
+for (var i = visible_count - 1; i >= 0; i--) 
 	{
 		var _struct = chatStella[i];
+		var _max_bubble_w = 500;
+		var _line_sep = 40;
 		//txtb_img += txtb_img_spd;
 		txtb_spr_w_gray = sprite_get_width(txtb_spr_gray);
 		txtb_spr_w_blue = sprite_get_width(txtb_spr_blue);
@@ -48,27 +38,23 @@ for (var i = visible_count - 1; i >= 0; i--) //i have to make it so that the arg
 		var _spr = _is_gray ? txtb_spr_gray : txtb_spr_blue;
 		var _x_pos = textbox_x + (_is_gray ? x_pos_gray : x_pos_blue);	
 		
-		var _txt_w = string_width(_struct.line) + border*2;
-		var _txt_h = string_height(_struct.line) + border*2;
+		var _txt_w = string_width_ext(_struct.line, _line_sep, _max_bubble_w) + border*2;
+		var _txt_h = string_height_ext(_struct.line, _line_sep, _max_bubble_w) + border*2;
 		
 		var _left_edge = _x_pos;
 		
 		if _is_gray {
 			_left_edge = _x_pos - _txt_w; }
-		
-		
-		//var _final_y = textbox_y + draw_y_cursor;
-		//if draw_y_cursor > limit {
-		//	_final_y -= (draw_y_cursor - limit); }
-		
+
 		_current_y -= _txt_h;
 		
-		//draw the textbox
+		//----------------draw the textbox----------------
 		draw_sprite_ext(_spr, 0, _x_pos, _current_y, _txt_w/txtb_spr_w_gray, _txt_h/txtb_spr_h_gray, 0, c_white, 1);
 				
-		//draw the text
-		draw_set_halign(fa_left);				
-		draw_text(_left_edge + border, _current_y + border, _struct.line);
+		//-----------------draw the text-----------------
+		draw_set_halign(fa_left);
+		draw_set_colour(c_white);
+		draw_text_ext(_left_edge + border, _current_y + border, _struct.line, _line_sep, _max_bubble_w);
 		
 		_current_y -= _spacing;
 
@@ -81,90 +67,62 @@ for (var i = visible_count - 1; i >= 0; i--) //i have to make it so that the arg
 		var _cam_x = camera_get_view_x(view_camera[0]);
 		var _cam_y = camera_get_view_y(view_camera[0]);
 		
+		var _bw = 801;
+		
+		var _opts = chatStella[visible_count - 1].options;
+		var _inner_padding = 10;
+		var _max_w = _bw - (_inner_padding * 2);
+		var _sep = 40;
+		var _options_gap = 10;
+		
+		var _total_text_height = 0;
+		for (var i = 0; i < array_length(_opts); i++) {
+			_total_text_height += string_height_ext("   " + _opts[i].text, _sep, _max_w);
+			if (i < array_length(_opts) - 1) _total_text_height += _options_gap;
+		}
+		
+		var _bh = _total_text_height + (_inner_padding*2);
 		var _bx = _cam_x + 379;
 		var _by = _cam_y + 450;
-		var _bw = 801;
-		var _bh = 105;
 		
 		draw_sprite_stretched(menuBackgroundWhite, 0, _bx, _by, _bw, _bh);
 		
 		draw_set_halign(fa_left);
-		draw_set_colour(c_black);
+		//draw_set_colour(c_black);
+		var _current_draw_y = _by + _inner_padding;
 		
-		var _opts = chatStella[visible_count - 1].options;
 		for (var i = 0; i < array_length(_opts); i++) {
-			draw_text(_bx + 10, _by + 10 + (i*40), "- " + _opts[i].text); }
+			var _txt = "   " + _opts[i].text;
+			var _h = string_height_ext(_txt, _sep, _max_w);
 			
+			var _x1 = _bx + _inner_padding;
+			var _y1 = _current_draw_y;
+			var _x2 = _bx + _bw  - _inner_padding;
+			var _y2 = _current_draw_y + _h;
+			
+			var _is_hovering = point_in_rectangle(mouse_x, mouse_y, _x1, _y1, _x2, _y2);
+			
+			if (_is_hovering) {
+				draw_set_colour(c_gray);
+				var _cursor_x = _x1 - 25;
+				var _cursor_y = _y1 + (_h / 2);
+				
+				draw_sprite(spr_textbox_arrow, 0, _cursor_x, _cursor_y);
+				
+				if (mouse_check_button_pressed(mb_left)) {
+					array_push(chatStella, chatStellaData[$ _opts[i].target]);
+					showing_options = false;
+				}
+			} else {
+				draw_set_colour(c_black); }
+			
+			draw_text_ext(_x1, _y1, _txt, _sep, _max_w);
+			//draw_text_ext(_bx + _inner_padding, _current_draw_y, _txt, _sep, _max_w); 
+			//_current_draw_y += string_height_ext(_txt, _sep, _max_w) + _options_gap;
+			_current_draw_y += _h + _options_gap;
+			}
+			
+		
 		draw_set_colour(c_white);
 	}
 	
-	//if (showing_options) {
-	//	var _node_with_options = chatStellaData[$ chatStella[visible_count-1].node_id];
-	//	var _opts = _node_with_options.options;
-		
-	//	var _box_x = textbox_x + 379;
-	//	var _box_y = textbox_y + 507;
-	//	var _box_w = 673;
-	//	var _box_h = 205;
-		
-	//	draw_sprite_stretched(menuBackgroundWhite, 0, _box_x, _box_y, _box_w, _box_h);
-		
-	//	draw_set_halign(fa_left);
-	//	draw_set_valign(fa_top);
-		
-	//	var _padding_inner = 30;
-	//	var _line_height = 40;
-		
-	//	for (var j = 0; j < array_length(_opts); j++) {
-	//		var _opt_text = string(j + 1) + ". " + _opts[j].text; 
-	//		var _text_x = _box_x + _padding_inner;
-	//		var _text_y = _box_y + _padding_inner + (j*_line_height);
-			
-	//		draw_set_colour(c_white);
-	//		draw_text(_text_x, _text_y, _opt_text);
-	//	}
-	//}
-			
-
-
-////draw the options
-//	var _op_space = 45;
-//	var _op_bord = 12;
-//	for (var op = 0; op < option_number; op++)
-//		{
-//		//the option box
-//		var _o_w = string_width(option[op]) +_op_bord*2;
-//		draw_sprite_ext(txtb_spr[page], txtb_img, _txtb_x + 48, _txtb_y - _op_space*option_number + _op_space*op, _o_w/txtb_spr_w, (_op_space-1)/txtb_spr_h, 0, c_white, 1);
-		
-//		//the arrow
-//		if option_pos == op
-//			{
-//			draw_sprite(spr_textbox_arrow, 0, _txtb_x,  _txtb_y - _op_space*option_number + _op_space*op);
-//			}
-		
-//		//the option text
-//		draw_text(_txtb_x + 48 + _op_bord, _txtb_y - _op_space*option_number + _op_space*op + 2, option[op]);
-//		}
-	
-////draw textbox
-//var _txtb_x = textbox_x + text_x_offset[page];
-//var _txtb_y = textbox_y;
-//txtb_img += txtb_img_spd;
-//txtb_spr_w = sprite_get_width(txtb_spr[page]);
-//txtb_spr_h = sprite_get_height(txtb_spr[page]);
-	
-////draw messages
-//for (var i = 0; i < array_length(messages); i++) {
-	
-//	var message1 = messages[i];
-	
-//	if sender == self
-//		{
-//		//draw right
-//		}
-//	else
-//		{
-//		//draw left
-//		}
-	
-//	}

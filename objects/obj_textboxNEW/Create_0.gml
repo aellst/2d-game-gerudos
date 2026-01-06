@@ -1,5 +1,7 @@
 //depth = -999
 
+//the 'give' thing is to determine which ending it gets. 0 = no ending at this message.
+
 //-------------------"chat Stella"------------------
 
 chatStella = [];
@@ -8,7 +10,7 @@ chatStellaData = {
 	"start": {
 		sender: "gray",
 		line: "Hi! Party at mine, you coming?",
-		next: "player_asks_when"
+		next: "player_asks_when",
 	},
 	"player_asks_when": {
 		sender: "blue",
@@ -21,7 +23,7 @@ chatStellaData = {
 	"tonight_node": {
 		sender: "gray",
 		line: "Tonight!",
-		next: "when_again"
+		next: "when_again",
 	},
 	"when_again" : {
 		sender: "blue",
@@ -29,7 +31,7 @@ chatStellaData = {
 		options: [
 			{ text: "Oh, at 6!", target: "at_6" },
 			{ text: "I plan to start at 6, and dinner at 7", target: "6_and_7" }
-		]
+		],
 	},
 	"at_6" : {
 		sender: "gray",
@@ -89,7 +91,10 @@ chatStellaData = {
 	"confirm_1": {
 		sender: "blue",
 		line: "ok, I'll see what I can do",
-		next: ""
+		next: "ending"
+	},
+	"ending": {
+		give: 1,
 	},
 	"specific_friends": {
 		sender: "gray",

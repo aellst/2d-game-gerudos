@@ -50,3 +50,16 @@ if (mouse_wheel_down()) {
 	scroll_offset += scroll_speed;
 }
 scroll_offset = clamp(scroll_offset, 0, max_scroll);
+
+
+//-------to get to the ending 'room'---------
+
+if (visible_count > 0)
+{
+    var _last_msg = chatStella[visible_count - 1];
+
+    if (variable_struct_exists(_last_msg, "give") && real(_last_msg.give) != 0)
+    {
+        room_goto(Room_End);
+    }
+}

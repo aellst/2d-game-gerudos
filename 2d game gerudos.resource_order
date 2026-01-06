@@ -11,6 +11,7 @@
     {"name":"obj_textbox","order":1,"path":"objects/obj_textbox/obj_textbox.yy",},
     {"name":"obj_textboxNEW","order":2,"path":"objects/obj_textboxNEW/obj_textboxNEW.yy",},
     {"name":"titleMenu","order":3,"path":"objects/titleMenu/titleMenu.yy",},
+    {"name":"Room_End","order":2,"path":"rooms/Room_End/Room_End.yy",},
     {"name":"Room2","order":1,"path":"rooms/Room2/Room2.yy",},
     {"name":"script_textbox_functions","order":1,"path":"scripts/script_textbox_functions/script_textbox_functions.yy",},
     {"name":"incoming_text_chatbox","order":2,"path":"sprites/incoming_text_chatbox/incoming_text_chatbox.yy",},

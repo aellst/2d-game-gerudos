@@ -2,32 +2,48 @@
 
 //"chat Stella"
 
+global.idForEnding = 0
+
 chatStella = [];
 
 chatStellaData = {
 	"start": {
 		sender: "gray",
 		line: "Hi! Party at mine, you coming?",
+		give: 0,
 		next: "player_asks_when"
 	},
 	"player_asks_when": {
 		sender: "blue",
+//		change: global.idForEnding = 1,
 		line: "When?",
+		give: 0,
+		//give: var a = 1
 		options: [
 			{ text: "Tonight!", target: "tonight_node" },
 			{ text: "At 6, and dinner at 7", target: "dinner_node" }
 		]
 	},
+/*	"Test": {
+		sender: "blue",
+		change: global.idForEnding = 1,
+		line: global.idForEnding,
+	},*/
 	"tonight_node": {
 		sender: "gray",
 		line: "Tonight!",
-		next: ""
+		//global.idForEnding + 1,
+		next: "ending" //with the id teehee
 	},
 	"dinner_node": {
 		sender: "gray",
-		line: "At 6, and dinner at 7", 
-		next: ""
-	}
+		line: "At 6, and dinner at 7",
+		//global.idForEnding + 2,
+		next: "ending" // with id: 2
+	},
+	"ending": {
+		
+	},
 };
 
 

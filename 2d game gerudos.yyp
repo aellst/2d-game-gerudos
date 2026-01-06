@@ -27,16 +27,18 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.0.207",
+    "IDEVersion":"2024.14.2.213",
   },
   "name":"2d game gerudos",
   "resources":[
     {"id":{"name":"font_random","path":"fonts/font_random/font_random.yy",},},
     {"id":{"name":"Font2","path":"fonts/Font2/Font2.yy",},},
+    {"id":{"name":"obj_endingBoxAndMessage","path":"objects/obj_endingBoxAndMessage/obj_endingBoxAndMessage.yy",},},
     {"id":{"name":"obj_speakblock","path":"objects/obj_speakblock/obj_speakblock.yy",},},
     {"id":{"name":"obj_textbox","path":"objects/obj_textbox/obj_textbox.yy",},},
     {"id":{"name":"obj_textboxNEW","path":"objects/obj_textboxNEW/obj_textboxNEW.yy",},},
     {"id":{"name":"titleMenu","path":"objects/titleMenu/titleMenu.yy",},},
+    {"id":{"name":"room_Ending","path":"rooms/room_Ending/room_Ending.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"id":{"name":"script_game_text","path":"scripts/script_game_text/script_game_text.yy",},},
@@ -50,6 +52,7 @@
     {"id":{"name":"spr_speakblock","path":"sprites/spr_speakblock/spr_speakblock.yy",},},
     {"id":{"name":"spr_textbox_arrow","path":"sprites/spr_textbox_arrow/spr_textbox_arrow.yy",},},
     {"id":{"name":"Sprite1","path":"sprites/Sprite1/Sprite1.yy",},},
+    {"id":{"name":"Sprite13","path":"sprites/Sprite13/Sprite13.yy",},},
     {"id":{"name":"Sprite7","path":"sprites/Sprite7/Sprite7.yy",},},
     {"id":{"name":"tileset","path":"sprites/tileset/tileset.yy",},},
     {"id":{"name":"tileset11","path":"sprites/tileset11/tileset11.yy",},},
@@ -61,6 +64,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
+    {"roomId":{"name":"room_Ending","path":"rooms/room_Ending/room_Ending.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

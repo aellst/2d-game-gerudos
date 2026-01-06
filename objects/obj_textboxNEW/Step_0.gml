@@ -8,45 +8,61 @@ if (visible_count < array_length(chatStella))
 		timer = 120;
 		
 		var _last_msg = chatStella[visible_count - 1];
+		var _data = chatStellaData[$ _last_msg.node_id];
 		
-		if (variable_struct_exists(_last_msg, "options"))
+		if (variable_struct_exists(_data, "options"))
 			{
-			choice_delay_timer = choice_delay_max;
+			showing_options = true;
 			}
-		else if (variable_struct_exists(_last_msg, "next")) && _last_msg.next != ""
+		else if (variable_struct_exists(_data, "next")) && _data.next != ""
 			{
-			array_push(chatStella, chatStellaData[$ _last_msg.next]);
+			push_node(_data.next);
 			}	
 		}
 }
 
-if choice_delay_timer > 0 {
-	choice_delay_timer -= 1;
-	
-	if (choice_delay_timer <= 0 && !showing_options) {
-		var _last_msg = chatStella[visible_count - 1];
-		if (variable_struct_exists(_last_msg, "options")) {
-			showing_options = true; }
-	}
-}
-	
-
 if (showing_options)
 {
-	var _opts = chatStella[visible_count-1].options;
-
+	var _data = chatStellaData[$ current_node];
+	var _node_with_options = chatStellaData[$ chatStella[visible_count-1].node_id];
+	var _opts = _node_with_options.options;
+	
 	if keyboard_check_pressed(ord("1")) {
-		array_push(chatStella, chatStellaData[$ _opts[0].target]);
+		push_node(_opts[0].target);
 		showing_options = false; }
-	if keyboard_check_pressed(ord("2")) {
-		array_push(chatStella, chatStellaData[$ _opts[1].target]);
+	else if keyboard_check_pressed(ord("2")) {
+		push_node(_opts[1].target);
 		showing_options = false; }
 }
 
-if (mouse_wheel_up()) {
-	scroll_offset -= scroll_speed;
+
+if (visible_count > 0)
+{
+	var _last_msg = chatStella[visible_count - 1];
+	var _data = chatStellaData[$ _last_msg.node_id];
+
+	if (struct_exists(_data, "give")) {
+		var endingid = _data.give;
+		if (endingid != 0) {
+			room_goto(room_Ending);
+		}
+	}
 }
-if (mouse_wheel_down()) {
-	scroll_offset += scroll_speed;
-}
-scroll_offset = clamp(scroll_offset, 0, max_scroll);
+
+/*if struct_exists(_data, "give") {
+	//room_goto(room_Ending);
+	
+	var _last_msg = chatStella[visible_count - 1];
+	var _data = chatStellaData[$ _last_msg.node_id];
+	
+	var endingid = variable_struct_get(_data, "give");
+	if (endingid != 0) {
+		room_goto(room_Ending);
+	};
+}*/
+//if ($ current_node )
+
+/*if (global.idForEnding != 0) {
+	room_goto(room_Ending)
+}	*/
+

@@ -5,6 +5,8 @@ textbox_y = camera_get_view_y(view_camera[0])+ 439;
 
 var _current_y = textbox_y;
 var _spacing = 10;
+var _draw_y = textbox_y + scroll_offset;
+var _total_history_h = 0;
 
 x_pos_gray = 1179;
 y_pos = 439;
@@ -41,25 +43,34 @@ for (var i = visible_count - 1; i >= 0; i--)
 		var _txt_w = string_width_ext(_struct.line, _line_sep, _max_bubble_w) + border*2;
 		var _txt_h = string_height_ext(_struct.line, _line_sep, _max_bubble_w) + border*2;
 		
+		_draw_y = _txt_h;	
+		
 		var _left_edge = _x_pos;
 		
 		if _is_gray {
 			_left_edge = _x_pos - _txt_w; }
 
-		_current_y -= _txt_h;
+		//_current_y -= _txt_h;
 		
 		//----------------draw the textbox----------------
-		draw_sprite_ext(_spr, 0, _x_pos, _current_y, _txt_w/txtb_spr_w_gray, _txt_h/txtb_spr_h_gray, 0, c_white, 1);
+		if (_draw_y < textbox_y + 600 && _draw_y > textbox_y - 400) {
+			draw_sprite_ext(_spr, 0, _x_pos, _draw_y, _txt_w/txtb_spr_w_gray, _txt_h/txtb_spr_h_gray, 0, c_white, 1);
 				
-		//-----------------draw the text-----------------
-		draw_set_halign(fa_left);
-		draw_set_colour(c_white);
-		draw_text_ext(_left_edge + border, _current_y + border, _struct.line, _line_sep, _max_bubble_w);
+			//-----------------draw the text-----------------
+			draw_set_halign(fa_left);
+			draw_set_colour(c_white);
+			draw_text_ext(_left_edge + border, _draw_y + border, _struct.line, _line_sep, _max_bubble_w);
+			
+		}
 		
-		_current_y -= _spacing;
+		_draw_y -= _spacing;
+		
+		_total_history_h += (_txt_h + _spacing);
 
 	}
 	
+	var _window_height = 416;
+	max_scroll = max(0, _total_history_h - _window_height);
 	
 	//---------------options-----------------------
 	

@@ -43,13 +43,13 @@ if (showing_options)
 		showing_options = false; }
 }
 
-if (mouse_wheel_up()) {
-	scroll_offset -= scroll_speed;
-}
-if (mouse_wheel_down()) {
-	scroll_offset += scroll_speed;
-}
-scroll_offset = clamp(scroll_offset, 0, max_scroll);
+//if (mouse_wheel_up()) {
+//	scroll_offset -= scroll_speed;
+//}
+//if (mouse_wheel_down()) {
+//	scroll_offset += scroll_speed;
+//}
+//scroll_offset = clamp(scroll_offset, 0, max_scroll);
 
 
 //-------to get to the ending 'room'---------

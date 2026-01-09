@@ -116,9 +116,9 @@ timer = 120;
 showing_options = false;
 choice_delay_timer = 0; 
 choice_delay_max = 120;
-//scroll_offset = 0;
-//max_scroll = 0;
-//scroll_speed = 30;
+scroll_offset = 0;
+max_scroll = 0;
+scroll_speed = 30;
 
 //----------------textbox parameters-----------------
 textbox_width = 379;

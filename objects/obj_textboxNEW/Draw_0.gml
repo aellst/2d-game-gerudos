@@ -1,14 +1,18 @@
 accept_key = keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or mouse_check_button_pressed(mb_left);
 
 
-//var _cam_x = camera_get_view_x(view_camera[0]);
-//var _cam_y = camera_get_view_y(view_camera[0]);
-//var _cam_h = camera_get_view_height(view_camera[0]);
+var _cam_x = camera_get_view_x(view_camera[0]);
+var _cam_y = camera_get_view_y(view_camera[0]);
+var _cam_h = camera_get_view_height(view_camera[0]);
 
-textbox_x = camera_get_view_x(view_camera[0]);
-textbox_y = camera_get_view_y(view_camera[0]) + 439;
+textbox_x = _cam_x;
+textbox_y = _cam_y + 439;
 
-var _current_y = textbox_y;
+//textbox_x = camera_get_view_x(view_camera[0]);
+//textbox_y = camera_get_view_y(view_camera[0]) + 439;
+
+//var _current_y = textbox_y;
+var _current_y = textbox_y + scroll_offset;
 var _spacing = 10;
 var _max_bubble_w = 500;
 var _line_sep = 40;
@@ -31,12 +35,12 @@ if setup == false
 	
 	}
 
-//var _total_history_h = 0;
+var _total_history_h = 0;
 
-//var _sw_gray = sprite_get_width(txtb_spr_gray);
-//var _sh_gray = sprite_get_height(txtb_spr_gray);
-//var _sw_blue = sprite_get_width(txtb_spr_blue);
-//var _sh_blue = sprite_get_height(txtb_spr_blue);
+var _sw_gray = sprite_get_width(txtb_spr_gray);
+var _sh_gray = sprite_get_height(txtb_spr_gray);
+var _sw_blue = sprite_get_width(txtb_spr_blue);
+var _sh_blue = sprite_get_height(txtb_spr_blue);
 
 //----------------chat loop (IT WORKS!! very messy sorry i tried many different things, i will clean it up when it's fully done)
 for (var i = visible_count - 1; i >= 0; i--) 
@@ -58,12 +62,12 @@ for (var i = visible_count - 1; i >= 0; i--)
 		var _txt_h = string_height_ext(_struct.line, _line_sep, _max_bubble_w) + border*2;
 		//var _txt_h = string_height(_struct.line) + border*2;
 		
-		//var _anchor_x = textbox_x + (_is_gray ? x_pos_gray : x_pos_blue);
-		//var _left_edge = _is_gray ? (_x_pos - _txt_w) : _x_pos;
-		var _left_edge = _x_pos
+		var _anchor_x = textbox_x + (_is_gray ? x_pos_gray : x_pos_blue);
+		var _left_edge = _is_gray ? (_x_pos - _txt_w) : _x_pos;
+		//var _left_edge = _x_pos
 		
-		if _is_gray {
-			_left_edge = _x_pos - _txt_w; }
+		//if _is_gray {
+		//	_left_edge = _x_pos - _txt_w; }
 			
 		_current_y -= _txt_h;	
 
@@ -80,14 +84,12 @@ for (var i = visible_count - 1; i >= 0; i--)
 			//draw_text(_left_edge + border, _current_y + border, _struct.line);
 			
 			_current_y -= _spacing;
+			_total_history_h += (_txt_h + _spacing);
 		}
 		
 
-		//_total_history_h += (_txt_h + _spacing);
-
-	
-	//var _window_height = 416;
-	//max_scroll = max(0, _total_history_h - 400);
+	var _window_height = 416;
+	max_scroll = max(0, _total_history_h - 400);
 	
 	//---------------options-----------------------
 	

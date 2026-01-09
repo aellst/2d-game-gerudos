@@ -44,8 +44,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"2d game gerudos",
-    "path":"2d game gerudos.yyp",
+    "name":"sprites",
+    "path":"folders/sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

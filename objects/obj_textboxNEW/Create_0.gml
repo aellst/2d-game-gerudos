@@ -89,10 +89,17 @@ chatStellaData = {
 		next: "confirm_1"
 	},
 	"confirm_1": {
-		sender: "blue",
-		line: "ok, I'll see what I can do",
-		next: "ending"
-	},
+        sender: "blue",
+        line: "ok, I'll see what I can do",
+        next: "confirm_to_end"
+    },
+    "confirm_to_end": {
+        sender: "gray",
+        line: "Would you like to end the game?",
+        options: [
+            { text: "End game", target: "ending"}
+        ]
+    },
 	"ending": {
 		give: 1,
 	},

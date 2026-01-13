@@ -8,6 +8,7 @@
   ],
   "ResourceOrderSettings":[
     {"name":"Font2","order":1,"path":"fonts/Font2/Font2.yy",},
+    {"name":"obj_contact_list","order":4,"path":"objects/obj_contact_list/obj_contact_list.yy",},
     {"name":"obj_textbox","order":1,"path":"objects/obj_textbox/obj_textbox.yy",},
     {"name":"obj_textboxNEW","order":2,"path":"objects/obj_textboxNEW/obj_textboxNEW.yy",},
     {"name":"titleMenu","order":3,"path":"objects/titleMenu/titleMenu.yy",},
@@ -16,6 +17,7 @@
     {"name":"script_textbox_functions","order":1,"path":"scripts/script_textbox_functions/script_textbox_functions.yy",},
     {"name":"incoming_text_chatbox","order":2,"path":"sprites/incoming_text_chatbox/incoming_text_chatbox.yy",},
     {"name":"menuBackground2","order":1,"path":"sprites/menuBackground2/menuBackground2.yy",},
+    {"name":"menuBackgroundEnd","order":10,"path":"sprites/menuBackgroundEnd/menuBackgroundEnd.yy",},
     {"name":"menuBackgroundWhite","order":8,"path":"sprites/menuBackgroundWhite/menuBackgroundWhite.yy",},
     {"name":"spr_player_alien","order":7,"path":"sprites/spr_player_alien/spr_player_alien.yy",},
     {"name":"spr_player_cat","order":9,"path":"sprites/spr_player_cat/spr_player_cat.yy",},

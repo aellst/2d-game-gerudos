@@ -25,6 +25,16 @@ chatStellaData = {
 		line: "Tonight!",
 		next: "when_again",
 	},
+	"dinner_node": {
+		sender: "gray",
+		line: "At 6, and dinner at 7", 
+		next: "okay_sure"
+	},
+	"okay_sure": {
+		sender: "blue",
+		line: "Okay, sure!", 
+		next: "ask_who"
+	},
 	"when_again" : {
 		sender: "blue",
 		line: "Yes, tonight, when?",
@@ -35,8 +45,13 @@ chatStellaData = {
 	},
 	"at_6" : {
 		sender: "gray",
-		line: "Oh, at 6!",
+		line: "I plan to start at 6, and dinner at 7",
 		next: "sure_1"
+	},
+	"6_and_7" : {
+		sender: "gray",
+		line: "Oh, at 6!",
+		next: "okay_sure"
 	},
 	"sure_1" : {
 		sender: "blue",
@@ -74,7 +89,34 @@ chatStellaData = {
 		line: "Could you bring food?",
 		next: "specify"
 	},
-	
+	"dish_or_snacks": {
+		sender: "gray",
+		line: "Do you have time to make a dish? Otherwise snacks or drinks are okay!",
+		next: "not_cook"
+	},
+	"not_cook": {
+		sender: "blue",
+		line: "If it's fine with you, I prefer going with snacks or drinks. I'm not a good cook.",
+		options: [
+			{ text: "Could you bring drinks for dinner?", target: "drinks_general2" },
+			{ text: "Could you bring a white wine or some light beers for dinner?", target: "wine_beers2" }
+		]
+	},
+	"drinks_general2": {
+		sender: "gray",
+		line: "Could you bring drinks for dinner?",
+		next: "okk"
+	},
+	"wine_beers": {
+		sender: "gray",
+		line: "Could you bring a white wine or some light beers for dinner?",
+		next: "okk"
+	},
+	"okk": {
+		sender: "blue",
+		line: "okk",
+		next: "confirm_to_end"
+	},
 	"specify": {
 		sender: "blue",
 		line: "Pls be more specific...",
@@ -90,7 +132,7 @@ chatStellaData = {
 	},
 	"confirm_1": {
         sender: "blue",
-        line: "ok, I'll see what I can do",
+        line: "...I'll see what I can do",
         next: "confirm_to_end"
     },
     "confirm_to_end": {
@@ -106,14 +148,86 @@ chatStellaData = {
 	"specific_friends": {
 		sender: "gray",
 		line: "Franka, Dan, Denise and Ruben. Ethan and Janiah are out of the country, so they can't come tonight.",
-		next: ""
+		next: "cool"
 	},
 	
-	"dinner_node": {
+	"cool": {
+		sender: "blue",
+		line: "Cool! Do you need me to bring something?",
+		options: [
+			{ text: "Could you bring food?", target: "bring_food" },
+			{ text: "Do you have time to make a dish? Otherwise snacks or drinks are okay!", target: "bring_dish" }
+		]
+	},
+	"bring_food": {
 		sender: "gray",
-		line: "At 6, and dinner at 7", 
-		next: ""
-	}
+		line: "Could you bring food?",
+		next: "dish_or_snack"
+	},
+	"bring_dish": {
+		sender: "gray",
+		line: "Do you have time to make a dish? Otherwise snacks or drinks are okay!",
+		next: "not_good_cook"
+	},
+	"dish_or_snack": {
+		sender: "blue",
+		line: "Do you need more like a dish or snacks?",
+		options: [
+			{ text: "You choose!", target: "you_choose" },
+			{ text: "Could you bring a dish? Maybe risotto or a salad?", target: "risotto_salad" }
+		]
+	},
+	"not_good_cook": {
+		sender: "blue",
+		line: "If it's fine with you, I prefer going with snacks or drinks. I'm not a good cook.",
+		options: [
+			{ text: "Could you bring drinks for dinner?", target: "drinks_general" },
+			{ text: "Could you bring a white wine or some light beers for dinner?", target: "wine_beers" }
+		]
+	},
+	"drinks_general": {
+		sender: "gray",
+		line: "Could you bring drinks for dinner?",
+		next: "yes"
+	},
+	"wine_beers": {
+		sender: "gray",
+		line: "Could you bring a white wine or some light beers for dinner?",
+		next: "yes"
+	},
+	"yes": {
+		sender: "blue",
+		line: "yess",
+		next: "confirm_to_end"
+	},
+	"you_choose": {
+		sender: "gray",
+		line: "You choose!",
+		next: "aight"
+	},
+	"aight": {
+		sender: "blue",
+		line: "aight",
+		next: "confirm_to_end"
+	},
+	"risotto_salad": {
+		sender: "gray",
+		line: "Could you bring a dish? Maybe risotto or a salad?",
+		next: "try_my_best"
+	},
+	"try_my_best": {
+		sender: "blue",
+		line: "I don't know how to make risotto. I'll try my best with a salad",
+		next: "sick"
+	},
+	"sick": {
+		sender: "gray",
+		line: "sick!",
+		next: "confirm_to_end"
+	},
+	
+	
+
 };
 
 //-----------------chat parameters-----------------

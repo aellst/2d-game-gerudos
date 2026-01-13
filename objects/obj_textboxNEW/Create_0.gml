@@ -1,6 +1,8 @@
 //depth = -999
 
-//the 'give' thing is to determine which ending it gets. 0 = no ending at this message.
+//the 'give' thing is to send to end room
+
+//the "iddd" is to determine which ending. atm 1 through 5 are used
 
 //-------------------"chat Stella"------------------
 
@@ -115,7 +117,8 @@ chatStellaData = {
 	"okk": {
 		sender: "blue",
 		line: "okk",
-		next: "confirm_to_end"
+		next: "confirm_to_end",
+		iddd: 5
 	},
 	"specify": {
 		sender: "blue",
@@ -133,7 +136,8 @@ chatStellaData = {
 	"confirm_1": {
         sender: "blue",
         line: "...I'll see what I can do",
-        next: "confirm_to_end"
+        next: "confirm_to_end",
+		iddd: 1
     },
     "confirm_to_end": {
         sender: "gray",
@@ -198,7 +202,8 @@ chatStellaData = {
 	"yes": {
 		sender: "blue",
 		line: "yess",
-		next: "confirm_to_end"
+		next: "confirm_to_end",
+		iddd: 2
 	},
 	"you_choose": {
 		sender: "gray",
@@ -208,7 +213,8 @@ chatStellaData = {
 	"aight": {
 		sender: "blue",
 		line: "aight",
-		next: "confirm_to_end"
+		next: "confirm_to_end",
+		iddd: 3
 	},
 	"risotto_salad": {
 		sender: "gray",
@@ -223,7 +229,8 @@ chatStellaData = {
 	"sick": {
 		sender: "gray",
 		line: "sick!",
-		next: "confirm_to_end"
+		next: "confirm_to_end",
+		iddd: 4
 	},
 	
 	

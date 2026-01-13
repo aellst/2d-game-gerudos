@@ -191,8 +191,8 @@
   "maintainGms1Font":false,
   "name":"Font2",
   "parent":{
-    "name":"tutorial dialogue",
-    "path":"tutorial dialogue.yyp",
+    "name":"fonts",
+    "path":"folders/fonts.yy",
   },
   "pointRounding":0,
   "ranges":[

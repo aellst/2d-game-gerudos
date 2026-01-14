@@ -23,8 +23,6 @@
     {"$GMIncludedFile":"","%Name":"blocks-extended.ttf","CopyToMask":-1,"filePath":"datafiles","name":"blocks-extended.ttf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"blocks-sans-serif.ttf","CopyToMask":-1,"filePath":"datafiles","name":"blocks-sans-serif.ttf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"blocks-serif.ttf","CopyToMask":-1,"filePath":"datafiles","name":"blocks-serif.ttf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"SF-Mono.dmg","CopyToMask":-1,"filePath":"datafiles","name":"SF-Mono.dmg","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"SF-Pro.dmg","CopyToMask":-1,"filePath":"datafiles","name":"SF-Pro.dmg","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],

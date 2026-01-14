@@ -136,7 +136,7 @@ chatStellaData = {
         next: "confirm_to_end"
     },
     "confirm_to_end": {
-        sender: "gray",
+        sender: "red",
         line: "Would you like to end the game?",
         options: [
             { text: "End game", target: "ending"}
@@ -251,6 +251,10 @@ txtb_img = 0;
 txtb_img_spd = 30/60;
 txtb_spr_gray = menuBackground2;
 txtb_spr_blue = menuBackground;
+txtb_spr_red = menuBackgroundEnd;
+x_pos_gray = 1179;
+x_pos_blue = 378;
+x_pos_red = (x_pos_gray + x_pos_blue) / 2;
 
 //---------------------text--------------------------
 page = 0; 

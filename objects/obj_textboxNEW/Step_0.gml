@@ -58,7 +58,7 @@ if (mouse_wheel_down()) {
 scroll_offset = clamp(scroll_offset, 0, max_scroll);
 
 
-//-------to get to the ending 'room'---------
+//-------to get to the ending 'room' and to make global.endIdentification the iddd value---------
 
 if (visible_count > 0)
 {
@@ -67,5 +67,9 @@ if (visible_count > 0)
     if (variable_struct_exists(_last_msg, "give") && real(_last_msg.give) != 0)
     {
         room_goto(Room_End);
+    };
+	if (variable_struct_exists(_last_msg, "iddd") && real(_last_msg.iddd) != 0)
+    {
+		global.endIdentification = real(_last_msg.iddd);
     }
 }

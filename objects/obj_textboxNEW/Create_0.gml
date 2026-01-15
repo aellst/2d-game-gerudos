@@ -1,6 +1,8 @@
 //depth = -999
 
-//the 'give' thing is to determine which ending it gets. 0 = no ending at this message.
+//the 'give' thing is to send to end room
+
+//the "iddd" is to determine which ending. atm 1 through 5 are used
 
 //-------------------"chat Stella"------------------
 
@@ -15,6 +17,7 @@ chatStellaData = {
 	"player_asks_when": {
 		sender: "blue",
 		line: "When?",
+		iddd: 1, //test
 		options: [
 			{ text: "Tonight!", target: "tonight_node" },
 			{ text: "At 6, and dinner at 7", target: "dinner_node" }
@@ -24,6 +27,7 @@ chatStellaData = {
 		sender: "gray",
 		line: "Tonight!",
 		next: "when_again",
+		give: 1, //quickly go to ending room -> to test ending room shit :>
 	},
 	"dinner_node": {
 		sender: "gray",
@@ -115,7 +119,8 @@ chatStellaData = {
 	"okk": {
 		sender: "blue",
 		line: "okk",
-		next: "confirm_to_end"
+		next: "confirm_to_end",
+		iddd: 5
 	},
 	"specify": {
 		sender: "blue",
@@ -133,7 +138,8 @@ chatStellaData = {
 	"confirm_1": {
         sender: "blue",
         line: "...I'll see what I can do",
-        next: "confirm_to_end"
+        next: "confirm_to_end",
+		iddd: 1
     },
     "confirm_to_end": {
         sender: "red",
@@ -198,7 +204,8 @@ chatStellaData = {
 	"yes": {
 		sender: "blue",
 		line: "yess",
-		next: "confirm_to_end"
+		next: "confirm_to_end",
+		iddd: 2
 	},
 	"you_choose": {
 		sender: "gray",
@@ -208,7 +215,8 @@ chatStellaData = {
 	"aight": {
 		sender: "blue",
 		line: "aight",
-		next: "confirm_to_end"
+		next: "confirm_to_end",
+		iddd: 3
 	},
 	"risotto_salad": {
 		sender: "gray",
@@ -223,7 +231,8 @@ chatStellaData = {
 	"sick": {
 		sender: "gray",
 		line: "sick!",
-		next: "confirm_to_end"
+		next: "confirm_to_end",
+		iddd: 4
 	},
 	
 	

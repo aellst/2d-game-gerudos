@@ -1,3 +1,9 @@
+stage = 0;
+layer1 = layer_get_id("Tiles_1");
+layer2 = layer_get_id("Tiles_3");
+layer3 = layer_get_id("Tiles_4");
+
+
 var ending1stella1 = "Stella's pissed as fuck, brings 1 bag of chips & the party is not fun.";
 var ending1stella2 = "You hinted. You implied. You trusted the vibe to carry the message.\nStella waited for the rest of the information but it never came.\nSo she defaulted to the safest possible interpretation: “I’ll bring something just in case.”";
 var ending1stella3 = "What this says ab you: \nYou often assume shared understanding, you expect people to “get it”. Now you have 1 coke to share with 5 people";

@@ -33,9 +33,9 @@
   "resources":[
     {"id":{"name":"font_random","path":"fonts/font_random/font_random.yy",},},
     {"id":{"name":"Font2","path":"fonts/Font2/Font2.yy",},},
+    {"id":{"name":"obj_contact_list","path":"objects/obj_contact_list/obj_contact_list.yy",},},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
     {"id":{"name":"obj_end_text","path":"objects/obj_end_text/obj_end_text.yy",},},
-    {"id":{"name":"obj_contact_list","path":"objects/obj_contact_list/obj_contact_list.yy",},},
     {"id":{"name":"obj_speakblock","path":"objects/obj_speakblock/obj_speakblock.yy",},},
     {"id":{"name":"obj_textbox","path":"objects/obj_textbox/obj_textbox.yy",},},
     {"id":{"name":"obj_textboxNEW","path":"objects/obj_textboxNEW/obj_textboxNEW.yy",},},
@@ -45,6 +45,7 @@
     {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"id":{"name":"script_game_text","path":"scripts/script_game_text/script_game_text.yy",},},
     {"id":{"name":"script_textbox_functions","path":"scripts/script_textbox_functions/script_textbox_functions.yy",},},
+    {"id":{"name":"ending_art","path":"sprites/ending_art/ending_art.yy",},},
     {"id":{"name":"incoming_text_chatbox","path":"sprites/incoming_text_chatbox/incoming_text_chatbox.yy",},},
     {"id":{"name":"menuBackground","path":"sprites/menuBackground/menuBackground.yy",},},
     {"id":{"name":"menuBackground2","path":"sprites/menuBackground2/menuBackground2.yy",},},

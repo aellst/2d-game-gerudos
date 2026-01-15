@@ -17,7 +17,7 @@ chatStellaData = {
 	"player_asks_when": {
 		sender: "blue",
 		line: "When?",
-//		iddd: 1, //test
+		iddd: 1, //test
 		options: [
 			{ text: "Tonight!", target: "tonight_node" },
 			{ text: "At 6, and dinner at 7", target: "dinner_node" }
@@ -27,7 +27,7 @@ chatStellaData = {
 		sender: "gray",
 		line: "Tonight!",
 		next: "when_again",
-//		give: 1, //quickly go to ending room -> to test ending room shit :>
+		give: 1, //quickly go to ending room -> to test ending room shit :>
 	},
 	"dinner_node": {
 		sender: "gray",
@@ -109,25 +109,31 @@ chatStellaData = {
 	"drinks_general2": {
 		sender: "gray",
 		line: "Could you bring drinks for dinner?",
-		next: "okk"
+		next: "okk1"
 	},
 	"wine_beers2": {
 		sender: "gray",
 		line: "Could you bring a white wine or some light beers for dinner?",
-		next: "okk"
+		next: "okk2"
 	},
-	"okk": {
+	"okk1": {
 		sender: "blue",
 		line: "okk",
 		next: "confirm_to_end",
-		iddd: 5
+		iddd: 1
+	},
+	"okk2": {
+		sender: "blue",
+		line: "okk",
+		next: "confirm_to_end",
+		iddd: 2
 	},
 	"specify": {
 		sender: "blue",
 		line: "Pls be more specific...",
 		options: [
 			{ text: "Like a dish or something", target: "dish" },
-			{ text: "Do you have time for risotto? Otherwise a salad?", target: "risotto_or_salad" }
+			{ text: "Do you have time for risotto? Otherwise a salad?", target: "risotto_or_salad1" }
 		]
 	},
 	"dish": {
@@ -180,7 +186,7 @@ chatStellaData = {
 		line: "Do you need more like a dish or snacks?",
 		options: [
 			{ text: "You choose!", target: "you_choose" },
-			{ text: "Could you bring a dish? Maybe risotto or a salad?", target: "risotto_salad" }
+			{ text: "Could you bring a dish? Maybe risotto or a salad?", target: "risotto_salad2" }
 		]
 	},
 	"not_good_cook": {
@@ -205,7 +211,7 @@ chatStellaData = {
 		sender: "blue",
 		line: "yess",
 		next: "confirm_to_end",
-		iddd: 2
+		iddd: 3
 	},
 	"you_choose": {
 		sender: "gray",
@@ -216,23 +222,39 @@ chatStellaData = {
 		sender: "blue",
 		line: "aight",
 		next: "confirm_to_end",
-		iddd: 3
+		iddd: 2
 	},
-	"risotto_salad": {
+	"risotto_salad1": {
 		sender: "gray",
 		line: "Could you bring a dish? Maybe risotto or a salad?",
-		next: "try_my_best"
+		next: "try_my_best1"
 	},
-	"try_my_best": {
+	"risotto_salad2": {
+		sender: "gray",
+		line: "Could you bring a dish? Maybe risotto or a salad?",
+		next: "try_my_best2"
+	},
+	"try_my_best1": {
 		sender: "blue",
 		line: "I don't know how to make risotto. I'll try my best with a salad",
-		next: "sick"
+		next: "sick1"
 	},
-	"sick": {
+	"try_my_best2": {
+		sender: "blue",
+		line: "I don't know how to make risotto. I'll try my best with a salad",
+		next: "sick2"
+	},
+	"sick1": {
 		sender: "gray",
 		line: "sick!",
 		next: "confirm_to_end",
-		iddd: 4
+		iddd: 1
+	},
+	"sick2": {
+		sender: "gray",
+		line: "sick!",
+		next: "confirm_to_end",
+		iddd: 3
 	},
 	
 	

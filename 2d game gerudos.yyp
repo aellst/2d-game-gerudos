@@ -27,10 +27,11 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.2.213",
+    "IDEVersion":"2024.14.0.207",
   },
   "name":"2d game gerudos",
   "resources":[
+    {"id":{"name":"font_bio","path":"fonts/font_bio/font_bio.yy",},},
     {"id":{"name":"font_random","path":"fonts/font_random/font_random.yy",},},
     {"id":{"name":"Font2","path":"fonts/Font2/Font2.yy",},},
     {"id":{"name":"bgm_obj","path":"objects/bgm_obj/bgm_obj.yy",},},

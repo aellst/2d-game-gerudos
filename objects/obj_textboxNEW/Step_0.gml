@@ -1,23 +1,29 @@
-if (visible_count < array_length(chatStella))
-{
-	timer -= 1;
-	
-	if timer <= 0
+if chat_active {
+
+	if !showing_options {
+
+		if (visible_count < array_length(chatStella))
 		{
-		visible_count += 1;
-		timer = 120;
+			timer -= 1;
+	
+			if timer <= 0
+				{
+				visible_count += 1;
+				timer = 100;
 		
-		var _last_msg = chatStella[visible_count - 1];
+				var _last_msg = chatStella[visible_count - 1];
 		
-		if (variable_struct_exists(_last_msg, "options"))
-			{
-			choice_delay_timer = choice_delay_max;
-			}
-		else if (variable_struct_exists(_last_msg, "next")) && _last_msg.next != ""
-			{
-			array_push(chatStella, chatStellaData[$ _last_msg.next]);
-			}	
+				if (variable_struct_exists(_last_msg, "options"))
+					{
+					choice_delay_timer = choice_delay_max;
+					}
+				else if (variable_struct_exists(_last_msg, "next")) && _last_msg.next != ""
+					{
+					array_push(chatStella, chatStellaData[$ _last_msg.next]);
+					}	
+				}
 		}
+	}
 }
 
 if choice_delay_timer > 0 {

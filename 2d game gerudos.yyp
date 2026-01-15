@@ -27,10 +27,11 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.2.213",
+    "IDEVersion":"2024.14.0.207",
   },
   "name":"2d game gerudos",
   "resources":[
+    {"id":{"name":"font_bio","path":"fonts/font_bio/font_bio.yy",},},
     {"id":{"name":"font_random","path":"fonts/font_random/font_random.yy",},},
     {"id":{"name":"Font2","path":"fonts/Font2/Font2.yy",},},
     {"id":{"name":"bgm_obj","path":"objects/bgm_obj/bgm_obj.yy",},},
@@ -51,9 +52,9 @@
     {"id":{"name":"bgm_main","path":"sounds/bgm_main/bgm_main.yy",},},
     {"id":{"name":"chatStellaTrigger_spr","path":"sprites/chatStellaTrigger_spr/chatStellaTrigger_spr.yy",},},
     {"id":{"name":"denise","path":"sprites/denise/denise.yy",},},
+    {"id":{"name":"ending_art","path":"sprites/ending_art/ending_art.yy",},},
     {"id":{"name":"franka","path":"sprites/franka/franka.yy",},},
     {"id":{"name":"glow_sprite","path":"sprites/glow_sprite/glow_sprite.yy",},},
-    {"id":{"name":"ending_art","path":"sprites/ending_art/ending_art.yy",},},
     {"id":{"name":"incoming_text_chatbox","path":"sprites/incoming_text_chatbox/incoming_text_chatbox.yy",},},
     {"id":{"name":"menuBackground","path":"sprites/menuBackground/menuBackground.yy",},},
     {"id":{"name":"menuBackground2","path":"sprites/menuBackground2/menuBackground2.yy",},},

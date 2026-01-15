@@ -26,13 +26,11 @@ y_pos_blue = 337;
 
 //setup
 if setup == false
-	{
-	
+{
 	setup = true;
 	draw_set_font(font_random);
 	draw_set_valign(fa_top);
-	
-	}
+}
 
 var _total_history_h = 0;
 

@@ -1,6 +1,5 @@
 accept_key = keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or mouse_check_button_pressed(mb_left);
 
-
 var _cam_x = camera_get_view_x(view_camera[0]);
 var _cam_y = camera_get_view_y(view_camera[0]);
 var _cam_h = camera_get_view_height(view_camera[0]);
@@ -20,9 +19,9 @@ var _line_sep = 40;
 //var _chat_bottom_limit = _cam_y + (_cam_h * 0.8);
 //var _current_y = _chat_bottom_limit + scroll_offset;
 
-x_pos_gray = 1179;
+
 y_pos = 439;
-x_pos_blue = 378;
+
 y_pos_blue = 337;
 
 //setup
@@ -54,17 +53,27 @@ for (var i = visible_count - 1; i >= 0; i--)
 		txtb_spr_h_blue = sprite_get_height(txtb_spr_blue);
 		
 		var _is_gray = (_struct.sender == "gray");
-		var _spr = _is_gray ? txtb_spr_gray : txtb_spr_blue;
-		var _x_pos = textbox_x + (_is_gray ? x_pos_gray : x_pos_blue);	
+		var _is_red = (_struct.sender == "red");
+		var _spr = txtb_spr_blue;
+		if (_is_gray) _spr = txtb_spr_gray;
+		if (_is_red) _spr = txtb_spr_red;
+		
+		//var _x_pos = textbox_x + (_is_gray ? x_pos_gray : x_pos_blue);	
 		
 		var _txt_w = string_width_ext(_struct.line, _line_sep, _max_bubble_w) + border*2
 		//var _txt_w = string_width(_struct.line) + border*2;
 		var _txt_h = string_height_ext(_struct.line, _line_sep, _max_bubble_w) + border*2;
 		//var _txt_h = string_height(_struct.line) + border*2;
 		
+		var _x_pos = textbox_x + x_pos_blue;
+		if (_is_gray) _x_pos = textbox_x + x_pos_gray;
+		if (_is_red) _x_pos = textbox_x + x_pos_red;
+		
 		var _anchor_x = textbox_x + (_is_gray ? x_pos_gray : x_pos_blue);
-		var _left_edge = _is_gray ? (_x_pos - _txt_w) : _x_pos;
-		//var _left_edge = _x_pos
+		//var _left_edge = _is_gray ? (_x_pos - _txt_w) : _x_pos;
+		var _left_edge = _x_pos;
+		if _is_gray { _left_edge = _x_pos - _txt_w; }
+		else if _is_red {_left_edge = _x_pos - (_txt_w/2); }
 		
 		//if _is_gray {
 		//	_left_edge = _x_pos - _txt_w; }
@@ -79,7 +88,8 @@ for (var i = visible_count - 1; i >= 0; i--)
 				
 			//-----------------draw the text-----------------
 			draw_set_halign(fa_left);
-			draw_set_colour(c_white);
+			if (_is_red) { draw_set_colour(c_black); }
+			else { draw_set_colour(c_white); }
 			draw_text_ext(_left_edge + border, _current_y + border, _struct.line, _line_sep, _max_bubble_w);
 			//draw_text(_left_edge + border, _current_y + border, _struct.line);
 			

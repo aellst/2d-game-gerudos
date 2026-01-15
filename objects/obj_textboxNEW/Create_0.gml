@@ -49,12 +49,12 @@ chatStellaData = {
 	},
 	"at_6" : {
 		sender: "gray",
-		line: "I plan to start at 6, and dinner at 7",
+		line: "Oh, at 6!",
 		next: "sure_1"
 	},
 	"6_and_7" : {
 		sender: "gray",
-		line: "Oh, at 6!",
+		line: "I plan to start at 6, and dinner at 7",
 		next: "okay_sure"
 	},
 	"sure_1" : {
@@ -111,7 +111,7 @@ chatStellaData = {
 		line: "Could you bring drinks for dinner?",
 		next: "okk"
 	},
-	"wine_beers": {
+	"wine_beers2": {
 		sender: "gray",
 		line: "Could you bring a white wine or some light beers for dinner?",
 		next: "okk"
@@ -142,7 +142,7 @@ chatStellaData = {
 		iddd: 1
     },
     "confirm_to_end": {
-        sender: "gray",
+        sender: "red",
         line: "Would you like to end the game?",
         options: [
             { text: "End game", target: "ending"}
@@ -253,13 +253,17 @@ scroll_speed = 30;
 //----------------textbox parameters-----------------
 textbox_width = 379;
 textbox_height = 57;
-border = 8; 
+border = 12; 
 line_sep = 36;
 line_width = textbox_width - border*2;
 txtb_img = 0;
 txtb_img_spd = 30/60;
 txtb_spr_gray = menuBackground2;
 txtb_spr_blue = menuBackground;
+txtb_spr_red = menuBackgroundEnd;
+x_pos_gray = 1179;
+x_pos_blue = 378;
+x_pos_red = (x_pos_gray + x_pos_blue) / 2;
 
 //---------------------text--------------------------
 page = 0; 

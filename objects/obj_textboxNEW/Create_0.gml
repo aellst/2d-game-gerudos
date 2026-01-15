@@ -233,13 +233,14 @@ chatStellaData = {
 //-----------------chat parameters-----------------
 current_node = "start";
 visible_count = 0;
-timer = 120;
+timer = 100;
 showing_options = false;
 choice_delay_timer = 0; 
-choice_delay_max = 120;
+choice_delay_max = 100;
 scroll_offset = 0;
 max_scroll = 0;
 scroll_speed = 30;
+chat_active = false;
 
 //----------------textbox parameters-----------------
 textbox_width = 379;

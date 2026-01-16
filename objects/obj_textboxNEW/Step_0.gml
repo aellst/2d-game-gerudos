@@ -1,4 +1,6 @@
 if chat_active {
+	
+	instance_deactivate_object(obj_notification);
 
 	if !showing_options {
 
@@ -39,14 +41,36 @@ if choice_delay_timer > 0 {
 
 if (showing_options)
 {
+		
 	var _opts = chatStella[visible_count-1].options;
+	var _total_opts = array_length(_opts);
+	var _move = (keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S")) - keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")));
 
-	if keyboard_check_pressed(ord("1")) {
-		array_push(chatStella, chatStellaData[$ _opts[0].target]);
-		showing_options = false; }
-	if keyboard_check_pressed(ord("2")) {
-		array_push(chatStella, chatStellaData[$ _opts[1].target]);
-		showing_options = false; }
+	if _move != 0 {
+		opt_select = (opt_select + _move + _total_opts) % _total_opts; }
+		//var _total = array_lenght(chatStellaData.options);
+		//if opt_select < 0 opt_select = _total_opts - 1;
+		//if opt_select >= _total_opts opt_select = 0;
+	
+	var _confirm = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter)
+	
+	if _confirm {
+		var _target_key = _opts[opt_select].target;
+		array_push(chatStella, chatStellaData[$ _target_key]);
+		
+			showing_options = false;
+			opt_select = 0;
+	}
+	
+
+
+//	if keyboard_check_pressed(ord("1")) {
+//		array_push(chatStella, chatStellaData[$ _opts[0].target]);
+//		showing_options = false; }
+//	if keyboard_check_pressed(ord("2")) {
+//		array_push(chatStella, chatStellaData[$ _opts[1].target]);
+//		showing_options = false; }
+	
 }
 
 if (mouse_wheel_up()) {

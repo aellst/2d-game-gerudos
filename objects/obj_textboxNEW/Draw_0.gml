@@ -144,18 +144,22 @@ if (chat_active) {
 				var _y2 = _current_draw_y + _h;
 			
 				var _is_hovering = point_in_rectangle(mouse_x, mouse_y, _x1, _y1, _x2, _y2);
+				
+				//if _is_hovering && (mouse_x != mouse_prev_x || mouse_y != mouse_prev_y) {
+				//	opt_select = i; }
 			
-				if (_is_hovering) {
+				if (i == opt_select) {
 					draw_set_colour(c_gray);
 					var _cursor_x = _x1 - 25;
 					var _cursor_y = _y1 + (_h / 2);
 				
 					draw_sprite(spr_textbox_arrow, 0, _cursor_x, _cursor_y);
 				
-					if (mouse_check_button_pressed(mb_left)) {
-						array_push(chatStella, chatStellaData[$ _opts[i].target]);
-						showing_options = false;
-					}
+					//if (mouse_check_button_pressed(mb_left)) {
+					//	array_push(chatStella, chatStellaData[$ _opts[i].target]);
+					//	showing_options = false;
+					//	opt_select = 0;
+					//}
 				} else {
 					draw_set_colour(c_black); }
 			
@@ -164,6 +168,9 @@ if (chat_active) {
 				//_current_draw_y += string_height_ext(_txt, _sep, _max_w) + _options_gap;
 				_current_draw_y += _h + _options_gap;
 				}
+				
+			mouse_prev_x = mouse_x;
+			mouve_prev_y = mouse_y;
 			
 		
 			draw_set_colour(c_white);

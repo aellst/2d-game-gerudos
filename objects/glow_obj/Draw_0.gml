@@ -1,5 +1,5 @@
 
-if (!is_pressed) {
+if (is_active && !is_pressed) {
 	draw_set_colour(c_white);
 	
 	var _base_alpha = image_alpha*0.5;

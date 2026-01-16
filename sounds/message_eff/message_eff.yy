@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"message_eff",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":3,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":2.970703,
+  "exportDir":"",
+  "name":"message_eff",
+  "parent":{
+    "name":"2d game gerudos",
+    "path":"2d game gerudos.yyp",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"message_eff.m4a",
+  "volume":1.0,
+}

@@ -272,6 +272,9 @@ scroll_offset = 0;
 max_scroll = 0;
 scroll_speed = 30;
 chat_active = false;
+opt_select = 0;
+mouse_prev_x = mouse_x;
+mouse_prev_y = mouse_y;
 
 //----------------textbox parameters-----------------
 textbox_width = 379;

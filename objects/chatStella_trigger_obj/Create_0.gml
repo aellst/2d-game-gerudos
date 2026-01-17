@@ -1,4 +1,7 @@
 is_pressed = false;
+is_active = false;
+
+alarm[0] = 120;
 
 //var _check_id = layer_get_id("Assets_3");
 

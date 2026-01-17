@@ -1,3 +1,5 @@
+var _last_count = visible_count;
+
 if chat_active {
 	
 	instance_deactivate_object(obj_notification);
@@ -57,10 +59,11 @@ if (showing_options)
 	if _confirm {
 		var _target_key = _opts[opt_select].target;
 		array_push(chatStella, chatStellaData[$ _target_key]);
+		//audio_play_sound(message_eff, 10, false);
 		
-			showing_options = false;
-			opt_select = 0;
-			//visible_count = array_length(chatStella);
+		showing_options = false;
+		opt_select = 0;
+		//visible_count = array_length(chatStella);
 		}
 	
 
@@ -98,3 +101,6 @@ if (visible_count > 0)
 		global.endIdentification = real(_last_msg.iddd);
     }
 }
+
+if visible_count > _last_count {
+	audio_play_sound(chat_bubble_eff, 10, false); }

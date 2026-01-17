@@ -56,6 +56,7 @@
     {"id":{"name":"script_game_text","path":"scripts/script_game_text/script_game_text.yy",},},
     {"id":{"name":"script_textbox_functions","path":"scripts/script_textbox_functions/script_textbox_functions.yy",},},
     {"id":{"name":"bgm_main","path":"sounds/bgm_main/bgm_main.yy",},},
+    {"id":{"name":"chat_bubble_eff","path":"sounds/chat_bubble_eff/chat_bubble_eff.yy",},},
     {"id":{"name":"message_eff","path":"sounds/message_eff/message_eff.yy",},},
     {"id":{"name":"bg_endingroom_2","path":"sprites/bg_endingroom_2/bg_endingroom_2.yy",},},
     {"id":{"name":"bg_endingroom_3","path":"sprites/bg_endingroom_3/bg_endingroom_3.yy",},},

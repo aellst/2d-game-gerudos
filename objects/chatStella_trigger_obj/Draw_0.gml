@@ -20,6 +20,7 @@ if (is_active && !is_pressed) {
 			}
 			
 			is_pressed = true;
+			//audio_play_sound(message_eff, 10, false);
 			
 			if instance_exists(obj_textboxNEW) {
 				obj_textboxNEW.chat_active = true;

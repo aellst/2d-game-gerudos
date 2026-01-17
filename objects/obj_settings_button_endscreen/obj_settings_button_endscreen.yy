@@ -3,6 +3,7 @@
   "%Name":"obj_settings_button_endscreen",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_settings_button_endscreen",
@@ -11,10 +12,7 @@
     "name":"objects",
     "path":"folders/objects.yy",
   },
-  "parentObjectId":{
-    "name":"obj_settings_button",
-    "path":"objects/obj_settings_button/obj_settings_button.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

@@ -27,7 +27,8 @@ chatStellaData = {
 		sender: "gray",
 		line: "Tonight!",
 		next: "when_again",
-		give: 1, //quickly go to ending room -> to test ending room shit :>
+//		give: 1, //quickly go to ending room -> to test ending room shit :>
+		give: 2, // destroy this object
 	},
 	"dinner_node": {
 		sender: "gray",
@@ -151,11 +152,15 @@ chatStellaData = {
         sender: "red",
         line: "Would you like to end the game?",
         options: [
-            { text: "End game", target: "ending"}
+            { text: "End game", target: "ending"},
+			{ text: "Go back to contact list", target: "next_chat"}
         ]
     },
 	"ending": {
 		give: 1,
+	},
+	"next_chat": {
+		give: 2,
 	},
 	"specific_friends": {
 		sender: "gray",

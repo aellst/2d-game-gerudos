@@ -4,7 +4,7 @@ if chat_active {
 
 	if !showing_options {
 
-		if (visible_count < array_length(chatStella))
+		if (visible_count < array_length(chatDan))
 		{
 			timer -= 1;
 	
@@ -13,7 +13,7 @@ if chat_active {
 				visible_count += 1;
 				timer = 100;
 		
-				var _last_msg = chatStella[visible_count - 1];
+				var _last_msg = chatDan[visible_count - 1];
 		
 				if (variable_struct_exists(_last_msg, "options"))
 					{
@@ -21,28 +21,31 @@ if chat_active {
 					}
 				else if (variable_struct_exists(_last_msg, "next")) && _last_msg.next != ""
 					{
-					array_push(chatStella, chatStellaData[$ _last_msg.next]);
+					array_push(chatDan, chatDanData[$ _last_msg.next]);
 					}	
 				}
 		}
 	}
 }
 
+
+
 if choice_delay_timer > 0 {
 	choice_delay_timer -= 1;
 	
 	if (choice_delay_timer <= 0 && !showing_options) {
-		var _last_msg = chatStella[visible_count - 1];
+		var _last_msg = chatDan[visible_count - 1];
 		if (variable_struct_exists(_last_msg, "options")) {
 			showing_options = true; }
 	}
 }
-	
+
+
 
 if (showing_options)
 {
 		
-	var _opts = chatStella[visible_count-1].options;
+	var _opts = chatDan[visible_count-1].options;
 	var _total_opts = array_length(_opts);
 	var _move = (keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S")) - keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")));
 
@@ -56,22 +59,14 @@ if (showing_options)
 	
 	if _confirm {
 		var _target_key = _opts[opt_select].target;
-		array_push(chatStella, chatStellaData[$ _target_key]);
+		array_push(chatDan, chatDanData[$ _target_key]);
 		
 			showing_options = false;
 			opt_select = 0;
 	}
-	
-
-
-//	if keyboard_check_pressed(ord("1")) {
-//		array_push(chatStella, chatStellaData[$ _opts[0].target]);
-//		showing_options = false; }
-//	if keyboard_check_pressed(ord("2")) {
-//		array_push(chatStella, chatStellaData[$ _opts[1].target]);
-//		showing_options = false; }
-	
 }
+	
+	
 
 if (mouse_wheel_up()) {
 	scroll_offset -= scroll_speed;
@@ -82,34 +77,22 @@ if (mouse_wheel_down()) {
 scroll_offset = clamp(scroll_offset, 0, max_scroll);
 
 
+
 //-------to get to the ending 'room' and to make global.endIdentification the iddd value---------
 
 if (visible_count > 0)
 {
-    var _last_msg = chatStella[visible_count - 1];
+    var _last_msg = chatDan[visible_count - 1];
 
     if (variable_struct_exists(_last_msg, "give") && real(_last_msg.give) == 1)
     {
         room_goto(Room_End);
     } else if (variable_struct_exists(_last_msg, "give") && real(_last_msg.give) == 2) {
-		instance_create_layer(0,0, "Instances", obj_dialogue_2);
+		instance_create_layer(0,0, "Instances", obj_dialogue_3); //DOESNT EXIST YET
 		instance_destroy();
-		layer_set_visible("Tiles_3", false);
-		layer_set_visible("Assets_4", false);
-		layer_set_visible("Assets_3", true);
-		
-		/*
-what needs to happen:
-denise or dan glows with notification sprite
-the "no chats are open" appears again
-if clicking on the person, you open that chat (dialogue_2)
-bio appears
-dialogue plays like this one.
-		*/
-		
 	};
 	if (variable_struct_exists(_last_msg, "iddd") && real(_last_msg.iddd) != 0)
     {
-		global.endIdentification = real(_last_msg.iddd);
+		global.endIdentification3 = real(_last_msg.iddd);
     }
 }

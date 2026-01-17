@@ -91,8 +91,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"Room_Titlescreen","path":"rooms/Room_Titlescreen/Room_Titlescreen.yy",},},
+    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"Room_End","path":"rooms/Room_End/Room_End.yy",},},
   ],
   "templateType":"game",

@@ -27,6 +27,7 @@
     {"name":"Room_Titlescreen","order":1,"path":"rooms/Room_Titlescreen/Room_Titlescreen.yy",},
     {"name":"script_textbox_functions","order":1,"path":"scripts/script_textbox_functions/script_textbox_functions.yy",},
     {"name":"bgm_main","order":7,"path":"sounds/bgm_main/bgm_main.yy",},
+    {"name":"chat_bubble_eff","order":9,"path":"sounds/chat_bubble_eff/chat_bubble_eff.yy",},
     {"name":"message_eff","order":8,"path":"sounds/message_eff/message_eff.yy",},
     {"name":"bg_endingroom_2","order":22,"path":"sprites/bg_endingroom_2/bg_endingroom_2.yy",},
     {"name":"bg_endingroom_3","order":24,"path":"sprites/bg_endingroom_3/bg_endingroom_3.yy",},

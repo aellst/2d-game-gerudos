@@ -28,7 +28,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.2.213",
+    "IDEVersion":"2024.14.0.207",
   },
   "name":"2d game gerudos",
   "resources":[
@@ -62,6 +62,7 @@
     {"id":{"name":"script_game_text","path":"scripts/script_game_text/script_game_text.yy",},},
     {"id":{"name":"script_textbox_functions","path":"scripts/script_textbox_functions/script_textbox_functions.yy",},},
     {"id":{"name":"bgm_main","path":"sounds/bgm_main/bgm_main.yy",},},
+    {"id":{"name":"chat_bubble_eff","path":"sounds/chat_bubble_eff/chat_bubble_eff.yy",},},
     {"id":{"name":"message_eff","path":"sounds/message_eff/message_eff.yy",},},
     {"id":{"name":"bg_endingroom_2","path":"sprites/bg_endingroom_2/bg_endingroom_2.yy",},},
     {"id":{"name":"bg_endingroom_3","path":"sprites/bg_endingroom_3/bg_endingroom_3.yy",},},
@@ -93,6 +94,7 @@
     {"id":{"name":"tileset11","path":"sprites/tileset11/tileset11.yy",},},
     {"id":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},},
     {"id":{"name":"TileSet2","path":"tilesets/TileSet2/TileSet2.yy",},},
+    {"id":{"name":"TileSet3","path":"tilesets/TileSet3/TileSet3.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",

@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"bgm_main",
+  "%Name":"chat_bubble_eff",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":3,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":193.14214,
+  "duration":1.4846258,
   "exportDir":"",
-  "name":"bgm_main",
+  "name":"chat_bubble_eff",
   "parent":{
     "name":"2d game gerudos",
     "path":"2d game gerudos.yyp",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"bgm_main.m4a",
+  "soundFile":"chat_bubble_eff.m4a",
   "volume":1.0,
 }

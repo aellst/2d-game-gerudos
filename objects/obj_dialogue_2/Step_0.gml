@@ -5,6 +5,7 @@ if (point_in_rectangle(mouse_x, mouse_y, 111, 183, 338, 263)) {
 		layer_set_visible("txt_bio_denise", true);
 		layer_set_visible("Assets_3", false);
 		layer_set_visible("Assets_2", false);
+		layer_set_visible("Tile_Dan_pfp", false)
 		chat_active = true;
 	}
 }
@@ -112,8 +113,9 @@ if (visible_count > 0)
 		layer_set_visible("bg_bio_Denise", false);
 		layer_set_visible("txt_bio_denise", false);
 		layer_set_visible("denise_namecard", false);
-		layer_set_visible("Assets_2", true)
+		layer_set_visible("Assets_2", true);
 		layer_set_visible("Assets_3", true);
+		layer_set_visible("Tile_Dan_pfp", true);
 		instance_destroy();
 	};
 	if (variable_struct_exists(_last_msg, "iddd") && real(_last_msg.iddd) != 0)

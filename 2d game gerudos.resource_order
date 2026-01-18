@@ -53,6 +53,7 @@
     {"name":"spr_home_screen","order":18,"path":"sprites/spr_home_screen/spr_home_screen.yy",},
     {"name":"spr_notification","order":17,"path":"sprites/spr_notification/spr_notification.yy",},
     {"name":"spr_placeholder_settings_button","order":19,"path":"sprites/spr_placeholder_settings_button/spr_placeholder_settings_button.yy",},
+    {"name":"spr_placeholder_settings_button2","order":26,"path":"sprites/spr_placeholder_settings_button2/spr_placeholder_settings_button2.yy",},
     {"name":"spr_placeholder_settings_menu","order":20,"path":"sprites/spr_placeholder_settings_menu/spr_placeholder_settings_menu.yy",},
     {"name":"spr_player_alien","order":7,"path":"sprites/spr_player_alien/spr_player_alien.yy",},
     {"name":"spr_player_cat","order":9,"path":"sprites/spr_player_cat/spr_player_cat.yy",},

@@ -145,8 +145,8 @@ if (chat_active) {
 			
 				var _is_hovering = point_in_rectangle(mouse_x, mouse_y, _x1, _y1, _x2, _y2);
 				
-				//if _is_hovering && (mouse_x != mouse_prev_x || mouse_y != mouse_prev_y) {
-				//	opt_select = i; }
+				if _is_hovering && (mouse_x != mouse_prev_x || mouse_y != mouse_prev_y) {
+					opt_select = i; }
 			
 				if (i == opt_select) {
 					draw_set_colour(c_gray);

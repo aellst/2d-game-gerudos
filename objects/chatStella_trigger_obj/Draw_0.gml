@@ -18,6 +18,7 @@ if (is_active && !is_pressed) {
 			if layer_exists(_layer_id_a4) {
 				layer_set_visible(_layer_id_a4, true);
 			}
+			layer_set_visible("Tile_Dan_pfp", false);
 			
 			is_pressed = true;
 			//audio_play_sound(message_eff, 10, false);

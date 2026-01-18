@@ -4,7 +4,7 @@ is_pressed = false;
 image_alpha = 1;
 glow_time = 0;
 
-alarm[0] = 120;
+alarm[0] = 1;
 
 	scalex = 3.515625
 	scaley = 1.03125

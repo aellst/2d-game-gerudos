@@ -5,3 +5,6 @@ image_alpha = 1;
 glow_time = 0;
 
 alarm[0] = 120;
+
+	objx = 220
+	objy = 94

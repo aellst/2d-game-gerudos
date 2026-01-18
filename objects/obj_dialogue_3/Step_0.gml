@@ -2,7 +2,9 @@ if (point_in_rectangle(mouse_x, mouse_y, 111, 286, 338, 347)) {
 	if (mouse_check_button_pressed(mb_left)) {
 		layer_set_visible("bg_bio_Dan", true);
 		layer_set_visible("txt_bio_Dan", true);
+		layer_set_visible("dan_namecard", true);
 		layer_set_visible("Assets_3", false);
+		layer_set_visible("Assets_2", false);
 		chat_active = true;
 	}
 }

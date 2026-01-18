@@ -1,8 +1,10 @@
 if (point_in_rectangle(mouse_x, mouse_y, 111, 183, 338, 263)) {
 	if (mouse_check_button_pressed(mb_left)) {
 		layer_set_visible("bg_bio_Denise", true);
+		layer_set_visible("denise_namecard", true);
 		layer_set_visible("txt_bio_denise", true);
 		layer_set_visible("Assets_3", false);
+		layer_set_visible("Assets_2", false);
 		chat_active = true;
 	}
 }
@@ -107,10 +109,12 @@ if (visible_count > 0)
 			image_xscale = 0.5;
 			image_yscale = 0.5;
 		};
-		instance_destroy();
 		layer_set_visible("bg_bio_Denise", false);
 		layer_set_visible("txt_bio_denise", false);
+		layer_set_visible("denise_namecard", false);
+		layer_set_visible("Assets_2", true)
 		layer_set_visible("Assets_3", true);
+		instance_destroy();
 	};
 	if (variable_struct_exists(_last_msg, "iddd") && real(_last_msg.iddd) != 0)
     {

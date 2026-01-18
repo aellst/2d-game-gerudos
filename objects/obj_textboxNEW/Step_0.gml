@@ -59,11 +59,6 @@ if (showing_options)
 	
 	if _confirm {
 		var _target_key = _opts[opt_select].target;
-		//if _target_key == "Go back to contact list" {
-		//	if instance_exists(glow_obj_2) {
-		//		glow_obj_2.is_active = true;
-		//	}
-		//}
 		array_push(chatStella, chatStellaData[$ _target_key]);
 		//audio_play_sound(message_eff, 10, false);
 		

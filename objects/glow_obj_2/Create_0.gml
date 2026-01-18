@@ -4,7 +4,7 @@ is_pressed = false;
 image_alpha = 1;
 glow_time = 0;
 
-alarm[0] = 120;
+alarm[0] = 1;
 
 	objx = 220
 	objy = 189

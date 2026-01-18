@@ -1,3 +1,5 @@
+notifplayed = false;
+
 //depth = -999
 
 //the 'give' thing is to send to end room

@@ -6,8 +6,6 @@
 
 //-------------------"chat Denise"------------------
 
-show_debug_message("dialogue 2 is created")
-
 chatDenise = [];
 
 chatDeniseData = {
@@ -27,7 +25,8 @@ chatDeniseData = {
     "tonight_node": {
         sender: "gray",
         line: "Tonight!",
-        next: "when_again"
+        next: "when_again",
+		give: 2, //got to dan chat quickly
     },
     "dinner_node": {
         sender: "gray",

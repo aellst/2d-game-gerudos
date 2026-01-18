@@ -1,3 +1,12 @@
+if (point_in_rectangle(mouse_x, mouse_y, 111, 286, 338, 347)) {
+	if (mouse_check_button_pressed(mb_left)) {
+		layer_set_visible("bg_bio_Dan", true);
+		layer_set_visible("txt_bio_Dan", true);
+		layer_set_visible("Assets_3", false);
+		chat_active = true;
+	}
+}
+
 if chat_active {
 	
 	instance_deactivate_object(obj_notification);
@@ -87,10 +96,7 @@ if (visible_count > 0)
     if (variable_struct_exists(_last_msg, "give") && real(_last_msg.give) == 1)
     {
         room_goto(Room_End);
-    } else if (variable_struct_exists(_last_msg, "give") && real(_last_msg.give) == 2) {
-		instance_create_layer(0,0, "Instances", obj_dialogue_3); //DOESNT EXIST YET
-		instance_destroy();
-	};
+    };
 	if (variable_struct_exists(_last_msg, "iddd") && real(_last_msg.iddd) != 0)
     {
 		global.endIdentification3 = real(_last_msg.iddd);

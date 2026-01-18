@@ -9,7 +9,7 @@ textbox_y = _cam_y + 439;
 
 //textbox_x = camera_get_view_x(view_camera[0]);
 //textbox_y = camera_get_view_y(view_camera[0]) + 439;
-
+ 
 //var _current_y = textbox_y;
 var _current_y = textbox_y + scroll_offset;
 var _spacing = 10;

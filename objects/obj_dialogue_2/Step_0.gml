@@ -97,8 +97,16 @@ if (visible_count > 0)
     {
         room_goto(Room_End);
     } else if (variable_struct_exists(_last_msg, "give") && real(_last_msg.give) == 2) {
-		instance_create_layer(0,0, "Instances", obj_dialogue_3); //DOESNT EXIST YET
+		instance_create_layer(0,0, "Instances", obj_dialogue_3);
+		instance_create_layer(0,0, "Instances_1", glow_obj_3);
+		with (instance_create_layer(310, 289, "Instances_1", obj_notification_3)) {
+			image_xscale = 0.5;
+			image_yscale = 0.5;
+		};
 		instance_destroy();
+		layer_set_visible("bg_bio_Denise", false);
+		layer_set_visible("txt_bio_denise", false);
+		layer_set_visible("Assets_3", true);
 	};
 	if (variable_struct_exists(_last_msg, "iddd") && real(_last_msg.iddd) != 0)
     {

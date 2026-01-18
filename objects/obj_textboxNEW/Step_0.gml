@@ -93,20 +93,15 @@ if (visible_count > 0)
         room_goto(Room_End);
     } else if (variable_struct_exists(_last_msg, "give") && real(_last_msg.give) == 2) {
 		instance_create_layer(0,0, "Instances", obj_dialogue_2);
+		instance_create_layer(0,0, "Instances_1", glow_obj_2);
+		with (instance_create_layer(308, 192, "Instances_1", obj_notification_2)) {
+			image_xscale = 0.5;
+			image_yscale = 0.5;
+		};
 		instance_destroy();
 		layer_set_visible("Tiles_3", false);
 		layer_set_visible("Assets_4", false);
-		layer_set_visible("Assets_3", true);
-		
-		/*
-what needs to happen:
-denise or dan glows with notification sprite
-the "no chats are open" appears again
-if clicking on the person, you open that chat (dialogue_2)
-bio appears
-dialogue plays like this one.
-		*/
-		
+		layer_set_visible("Assets_3", true);		
 	};
 	if (variable_struct_exists(_last_msg, "iddd") && real(_last_msg.iddd) != 0)
     {

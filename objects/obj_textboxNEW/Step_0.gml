@@ -41,6 +41,7 @@ if choice_delay_timer > 0 {
 }
 	
 
+
 if (showing_options)
 {
 		

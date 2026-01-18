@@ -7,6 +7,8 @@ if (point_in_rectangle(mouse_x, mouse_y, 111, 183, 338, 263)) {
 	}
 }
 
+var _last_count = visible_count 
+
 if chat_active {
 	
 	instance_deactivate_object(obj_notification);
@@ -39,6 +41,7 @@ if chat_active {
 
 
 
+
 if choice_delay_timer > 0 {
 	choice_delay_timer -= 1;
 	
@@ -64,7 +67,7 @@ if (showing_options)
 		//if opt_select < 0 opt_select = _total_opts - 1;
 		//if opt_select >= _total_opts opt_select = 0;
 	
-	var _confirm = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter)
+	var _confirm = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter) || mouse_check_button_pressed(mb_left);
 	
 	if _confirm {
 		var _target_key = _opts[opt_select].target;
@@ -88,6 +91,7 @@ scroll_offset = clamp(scroll_offset, 0, max_scroll);
 
 
 //-------to get to the ending 'room' and to make global.endIdentification the iddd value---------
+
 
 if (visible_count > 0)
 {
@@ -115,3 +119,6 @@ if (visible_count > 0)
 }
 
 // try to also be able to add an id in options
+
+if visible_count > _last_count {
+	audio_play_sound(chat_bubble_eff, 10, false); }

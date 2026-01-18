@@ -106,7 +106,8 @@ if (visible_count > 0)
 		instance_destroy();
 		layer_set_visible("Tiles_3", false);
 		layer_set_visible("Assets_4", false);
-		layer_set_visible("Assets_3", true);		
+		layer_set_visible("Assets_3", true);
+		layer_set_visible("Tile_dan_pfp", true);
 	};
 	if (variable_struct_exists(_last_msg, "iddd") && real(_last_msg.iddd) != 0)
     {

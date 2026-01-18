@@ -120,6 +120,10 @@ if (visible_count > 0)
 	};
 	if (variable_struct_exists(_last_msg, "iddd") && real(_last_msg.iddd) != 0)
     {
+		if (notifplayed == false) {
+			audio_play_sound(message_eff, 10, false);
+			notifplayed = true;
+		}
 		global.endIdentification2 = real(_last_msg.iddd);
     }
 }

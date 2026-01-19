@@ -30,7 +30,7 @@ chatStellaData = {
 		line: "Tonight!",
 		next: "when_again",
 //		give: 1, //quickly go to ending room -> to test ending room shit :>
-		//give: 2, // go to denise
+		give: 2, // go to denise
 	},
 	"dinner_node": {
 		sender: "gray",

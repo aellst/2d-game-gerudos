@@ -12,7 +12,7 @@ chatDanData = {
     "start": {
 		sender: "blue",
 		line: "Hey, Denise said you were having a party. At what time?",
-		option: [
+		options: [
             { text: "Tonight!", target: "tonight_node" },
             { text: "At 6, and there's dinner at 7", target: "dinner_node" }
         ]

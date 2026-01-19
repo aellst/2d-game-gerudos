@@ -1,4 +1,4 @@
-draw_set_font(font_random)
+draw_set_font(fnt_standard)
 
 if (point_in_rectangle(mouse_x, mouse_y, 368, 454, 652, 500)) {
 	draw_set_colour(c_yellow);

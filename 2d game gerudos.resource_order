@@ -7,6 +7,7 @@
     {"name":"tilesets","order":3,"path":"folders/tilesets.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"fnt_dyslexia","order":3,"path":"fonts/fnt_dyslexia/fnt_dyslexia.yy",},
     {"name":"font_bio","order":2,"path":"fonts/font_bio/font_bio.yy",},
     {"name":"Font2","order":1,"path":"fonts/Font2/Font2.yy",},
     {"name":"bgm_obj","order":6,"path":"objects/bgm_obj/bgm_obj.yy",},

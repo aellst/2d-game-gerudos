@@ -32,8 +32,9 @@
   },
   "name":"2d game gerudos",
   "resources":[
+    {"id":{"name":"fnt_dyslexia","path":"fonts/fnt_dyslexia/fnt_dyslexia.yy",},},
+    {"id":{"name":"fnt_standard","path":"fonts/fnt_standard/fnt_standard.yy",},},
     {"id":{"name":"font_bio","path":"fonts/font_bio/font_bio.yy",},},
-    {"id":{"name":"font_random","path":"fonts/font_random/font_random.yy",},},
     {"id":{"name":"Font2","path":"fonts/Font2/Font2.yy",},},
     {"id":{"name":"bgm_obj","path":"objects/bgm_obj/bgm_obj.yy",},},
     {"id":{"name":"chatStella_trigger_obj","path":"objects/chatStella_trigger_obj/chatStella_trigger_obj.yy",},},

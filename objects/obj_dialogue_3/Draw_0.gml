@@ -35,7 +35,7 @@ y_pos_blue = 337;
 if setup == false
 {
 	setup = true;
-	draw_set_font(font_random);
+	draw_set_font(global.font_random);
 	draw_set_valign(fa_top);
 }
 

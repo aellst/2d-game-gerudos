@@ -8,7 +8,7 @@ if setup == false
 	{
 		
 	setup = true;
-	draw_set_font(font_random);
+	draw_set_font(fnt_standard);
 	draw_set_valign(fa_top);
 	draw_set_halign(fa_left);
 		

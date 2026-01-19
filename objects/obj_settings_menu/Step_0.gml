@@ -1,3 +1,5 @@
+if !visible exit;
+
 var _up_key = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
 var _down_key = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"));
 var _accept_key = keyboard_check_pressed(vk_enter) ||keyboard_check_pressed(vk_space);
@@ -20,10 +22,26 @@ if (_accept_key) {
 			}
 			break;
 		case 1:
-			switch(pos) {
-				case 3: menu_level = 0; break;
-			}
-			break;
+		switch(pos) {
+				case 0: menu_level = 2; break; 
+	            case 1: break;
+	            case 2: break;
+	            case 3: menu_level = 0; break;
+            }
+            break;
+		case 2:
+            switch(pos) {
+                case 0: 
+                    global.font_random = fnt_standard; 
+                    break;
+                case 1: 
+                    global.font_random = fnt_dyslexia; 
+                    break;
+                case 2: 
+                    menu_level = 1; 
+                    break;
+            }
+            break;
 	}
 	
 	if (_sml != menu_level) pos = 0;

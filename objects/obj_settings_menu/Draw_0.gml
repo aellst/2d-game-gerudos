@@ -1,7 +1,7 @@
 if (!visible) exit;
 
 //draw the options
-var _fnt_game = font_random
+var _fnt_game = global.font_random
 draw_set_font(_fnt_game);
 draw_set_valign(fa_top);
 draw_set_halign(fa_left);

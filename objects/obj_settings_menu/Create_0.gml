@@ -1,4 +1,5 @@
 visible = false;
+global.font_random = fnt_standard
 
 width = 104;
 height = 154;
@@ -18,6 +19,11 @@ option[1, 0] = "Font";
 option[1, 1] = "Message speed";
 option[1, 2] = "Brightness";
 option[1, 3] = "Back";
+
+//font menu
+option[2, 0] = "Standard Font";
+option[2, 1] = "Dyslexia Font";
+option[2, 2] = "Back";
 
 op_length = 0;
 menu_level = 0;

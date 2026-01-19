@@ -194,5 +194,6 @@ draw_char = 0;
 text_spd = 1;
 
 setup = false;
+_last_msg = {};
 
 array_push(chatDan, chatDanData.start);

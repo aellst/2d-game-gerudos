@@ -70,7 +70,7 @@ chatStellaData = {
 		line: "Who's coming?",
 		options: [
 			{ text: "Our friend group", target: "friend_group" },
-			{ text: "Franka, Dan, Denise and Ruben. Ethan and Janiah are out of the country, so they can't come tonight.", target: "specific_friends" },
+			{ text: "Franka and Ruben. Ethan and Janiah are out of the country, so they can't come tonight.", target: "specific_friends" },
 		]
 	},
 	"friend_group": {

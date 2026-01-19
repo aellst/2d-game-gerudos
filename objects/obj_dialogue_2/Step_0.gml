@@ -1,3 +1,6 @@
+
+if obj_settings_menu.visible == true {exit}
+
 if (point_in_rectangle(mouse_x, mouse_y, 111, 183, 338, 263)) {
 	if (mouse_check_button_pressed(mb_left)) {
 		layer_set_visible("bg_bio_Denise", true);
@@ -9,6 +12,7 @@ if (point_in_rectangle(mouse_x, mouse_y, 111, 183, 338, 263)) {
 		chat_active = true;
 	}
 }
+
 
 var _last_count = visible_count 
 

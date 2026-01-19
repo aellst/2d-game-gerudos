@@ -220,7 +220,7 @@ chatDeniseData = {
 //-----------------chat parameters-----------------
 current_node = "start";
 visible_count = 0;
-timer = 100;
+timer = global.text_speed;
 showing_options = false;
 choice_delay_timer = 0; 
 choice_delay_max = 100;

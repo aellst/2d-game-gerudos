@@ -1,6 +1,13 @@
 visible = false;
 global.font_random = fnt_standard
-global.brightness_alpha = 0;
+
+if (!variable_global_exists("brightness_alpha")) {
+    global.brightness_alpha = 0;
+}
+
+if (!variable_global_exists("text_speed")) {
+    global.text_speed = 100; 
+}
 
 width = 104;
 height = 154;
@@ -40,3 +47,4 @@ option[3, 3] = "Back";
 
 op_length = 0;
 menu_level = 0;
+input_delay = 0;

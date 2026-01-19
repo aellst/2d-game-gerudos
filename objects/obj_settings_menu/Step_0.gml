@@ -1,3 +1,12 @@
+if (keyboard_check_pressed(vk_escape)) {
+    visible = !visible;
+	if visible { menu_level = 0; pos = 0; }
+}
+
+if (input_delay > 0) {
+    input_delay -= 1;
+}
+
 if !visible exit;
 
 var _up_key = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
@@ -26,16 +35,16 @@ if (_accept_key) {
 				case 0: menu_level = 1; break; 
 	            case 1: menu_level = 2; break;
 	            case 2: menu_level = 3; break;
-	            case 3: visible = false; break;
+	            case 3: visible = false; input_delay = 5; break;
             }
             break;
 		case 1:
             switch(pos) {
                 case 0: 
-                    global.font_random = fnt_standard; 
+                    global.font_random = fnt_standard; menu_level = 0;
                     break;
                 case 1: 
-                    global.font_random = fnt_dyslexia; 
+                    global.font_random = fnt_dyslexia; menu_level = 0;
 					//text_3BD2E03.font = fnt_dyslexia;
 					//text_143E02D.font = fnt_dyslexia;
 					//text_3789BA39.font = fnt_dyslexia;
@@ -52,21 +61,23 @@ if (_accept_key) {
             break;
 		case 2:
 			switch(pos) {
-		        case 0: global.text_speed = 180; break; 
-		        case 1: global.text_speed = 100;  break;
-		        case 2: global.text_speed = 40;    break; 
-			    case 3: menu_level = 0;           break;
+		        case 0: global.text_speed = 180; menu_level = 0; break; 
+		        case 1: global.text_speed = 100; menu_level = 0; break;
+		        case 2: global.text_speed = 40;  menu_level = 0; break; 
+			    case 3: menu_level = 0; break;
 			}
 			break;
 		case 3: 
 			switch(pos) {
-		        case 0: global.brightness_alpha = 0; break;    // No overlay
-		        case 1: global.brightness_alpha = 0.25; break; // Slightly dim
-		        case 2: global.brightness_alpha = 0.5; break;  // Very dark
-		        case 3: menu_level = 0; break;                // Back
+		        case 0: global.brightness_alpha = 0; menu_level = 0; break;  
+		        case 1: global.brightness_alpha = 0.25; menu_level = 0; break;
+		        case 2: global.brightness_alpha = 0.5; menu_level = 0; break; 
+		        case 3: menu_level = 0; break;     
     }
     break;
 	}
 	
 	if (_sml != menu_level) pos = 0;
 }
+
+if (input_delay > 0) input_delay--;

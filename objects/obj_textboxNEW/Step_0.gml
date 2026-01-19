@@ -1,6 +1,11 @@
 var _last_count = visible_count;
 
-if obj_settings_menu.visible == true {exit}
+if (instance_exists(obj_settings_menu)) {
+	if (obj_settings_menu.visible || obj_settings_menu.input_delay > 0) {
+		mouse_right_spot = false; 
+        exit;
+    }
+}
 
 if chat_active {
 	

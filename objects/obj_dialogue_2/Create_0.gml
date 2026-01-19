@@ -23,7 +23,7 @@ chatDeniseData = {
 	"party_4": {
 		sender: "gray",
 		line: "I'm alright, wanna come over to my party?",
-		iddd: 1,
+		//iddd: 1,
 		next: "player_asks_when",
         /*sender: "gray",
         line: "Hi! Party at mine, you coming?",
@@ -37,7 +37,7 @@ chatDeniseData = {
     "player_asks_when": {
         sender: "blue",
         line: "When?",
-		give: 2,
+		//give: 2,
         options: [
             { text: "This evening", target: "tonight_node" },
             { text: "Around 6, and dinner at 7", target: "dinner_node" }

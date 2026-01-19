@@ -166,7 +166,7 @@ chatStellaData = {
 	},
 	"specific_friends": {
 		sender: "gray",
-		line: "Franka, Dan, Denise and Ruben. Ethan and Janiah are out of the country, so they can't come tonight.",
+		line: "Franka and Ruben. Ethan and Janiah are out of the country, so they can't come tonight.",
 		next: "cool"
 	},
 	

@@ -1,4 +1,6 @@
 // click anywhere except settings makes stage move on
+
+if obj_settings_menu.visible == true {exit}
 var xt = 1206
 var yt = 10
 var xb = 1270

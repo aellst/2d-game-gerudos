@@ -1,5 +1,5 @@
 visible = false;
-/*
+
 width = 104;
 height = 154;
 
@@ -20,4 +20,4 @@ option[1, 2] = "Brightness";
 option[1, 3] = "Back";
 
 op_length = 0;
-menu_level = 0;*/
+menu_level = 0;

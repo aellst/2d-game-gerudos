@@ -1,8 +1,12 @@
-/*//draw the options
-fnt_game = font_random
-draw_set_font(fnt_game);
+if (!visible) exit;
+
+//draw the options
+var _fnt_game = font_random
+draw_set_font(_fnt_game);
 draw_set_valign(fa_top);
 draw_set_halign(fa_left);
+
+op_length = array_length(option[menu_level]);
 
 //dynamically get width and height of menu
 var _new_w = 0;
@@ -12,7 +16,7 @@ for (var i = 0; i < op_length; i++)
         _new_w = max(_new_w, _op_w);
     }
 width = _new_w + op_border*2;
-height = op_border*2 + string_height(option[0, 0]) + (op_length - 1) + op_space; // multiplication?
+height = op_border*2 + string_height(option[0, 0]) + (op_length - 1) * op_space; // multiplication?
 
 //center menu
 x = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])/2 - width/2;
@@ -24,7 +28,9 @@ draw_sprite_ext(sprite_index, image_index, x, y, width/sprite_width, height/spri
 
 for (var i = 0; i < op_length; i++)
     {
-        var _c = c_white;
-        if pos == i {_c = c_yellow};
-    draw_text_color(x + op_border, y + op_border + op_spacei, option[menu_level, i], _c, _c, _c, _c, 1);
-    }*/
+		var _c = (pos == i) ? c_yellow : c_white;
+        //var _c = c_white;
+        //if pos == i {_c = c_yellow};
+		var _draw_y = y + op_border + (i*op_space);
+    draw_text_color(x + op_border, _draw_y, option[menu_level, i], _c, _c, _c, _c, 1);
+    }

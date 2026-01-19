@@ -19,7 +19,7 @@ chatStellaData = {
 	"player_asks_when": {
 		sender: "blue",
 		line: "When?",
-		iddd: 1, //test
+		//iddd: 1, //test
 		options: [
 			{ text: "Tonight!", target: "tonight_node" },
 			{ text: "At 6, and dinner at 7", target: "dinner_node" }

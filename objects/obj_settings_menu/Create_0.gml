@@ -14,8 +14,8 @@ option[0, 1] = "Settings";
 option[0, 2] = "Quit Game";
 
 //settings menu
-option[1, 0] = "change Font";
-option[1, 1] = "change speed between messages";
+option[1, 0] = "Font";
+option[1, 1] = "Message speed";
 option[1, 2] = "Brightness";
 option[1, 3] = "Back";
 

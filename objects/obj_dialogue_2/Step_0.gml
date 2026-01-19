@@ -123,6 +123,7 @@ if (visible_count > 0)
 		if (notifplayed == false) {
 			audio_play_sound(message_eff, 10, false);
 			notifplayed = true;
+		if glow_obj_3.is_active == false { glow_obj_3.is_active = true; }
 		}
 		global.endIdentification2 = real(_last_msg.iddd);
     }

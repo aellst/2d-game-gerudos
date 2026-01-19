@@ -23,10 +23,10 @@ if (_accept_key) {
 		//	break;
 		case 0:
 		switch(pos) {
-				case 0: menu_level = 2; break; 
-	            case 1: menu_level = 3; break;
-	            case 2: break;
-	            case 3: menu_level = 0; break;
+				case 0: menu_level = 1; break; 
+	            case 1: menu_level = 2; break;
+	            case 2: menu_level = 3; break;
+	            case 3: visible = false; break;
             }
             break;
 		case 1:
@@ -46,7 +46,7 @@ if (_accept_key) {
 					//text_526DDE3E.font = fnt_dyslexia;
                     break;
                 case 2: 
-                    menu_level = 1; 
+                    menu_level = 0; 
                     break;
             }
             break;
@@ -55,8 +55,17 @@ if (_accept_key) {
 		        case 0: global.text_speed = 180; break; 
 		        case 1: global.text_speed = 100;  break;
 		        case 2: global.text_speed = 40;    break; 
-			    case 3: menu_level = 1;           break;
+			    case 3: menu_level = 0;           break;
 			}
+			break;
+		case 3: 
+			switch(pos) {
+		        case 0: global.brightness_alpha = 0; break;    // No overlay
+		        case 1: global.brightness_alpha = 0.25; break; // Slightly dim
+		        case 2: global.brightness_alpha = 0.5; break;  // Very dark
+		        case 3: menu_level = 0; break;                // Back
+    }
+    break;
 	}
 	
 	if (_sml != menu_level) pos = 0;

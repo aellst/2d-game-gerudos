@@ -1,5 +1,6 @@
 visible = false;
 global.font_random = fnt_standard
+global.brightness_alpha = 0;
 
 width = 104;
 height = 154;
@@ -30,6 +31,12 @@ option[2, 0] = "Slow";
 option[2, 1] = "Medium";
 option[2, 2] = "Fast";
 option[2, 3] = "Back";
+
+//brightness menu 
+option[3, 0] = "Bright (Default)";
+option[3, 1] = "Dim";
+option[3, 2] = "Dark";
+option[3, 3] = "Back";
 
 op_length = 0;
 menu_level = 0;

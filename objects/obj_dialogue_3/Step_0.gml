@@ -37,7 +37,8 @@ if chat_active {
 		
 				var _last_msg = chatDan[visible_count - 1];
 		
-				if (variable_struct_exists(_last_msg, "options"))
+				if is_struct(_last_msg) {
+					if (variable_struct_exists(_last_msg, "options"))
 					{
 					choice_delay_timer = choice_delay_max;
 					}
@@ -45,6 +46,7 @@ if chat_active {
 					{
 					array_push(chatDan, chatDanData[$ _last_msg.next]);
 					}	
+				}
 				}
 		}
 	}
@@ -112,15 +114,18 @@ scroll_offset = clamp(scroll_offset, 0, max_scroll);
 if (visible_count > 0)
 {
     var _last_msg = chatDan[visible_count - 1];
+	
+	if is_struct(_last_msg) {
 
-    if (variable_struct_exists(_last_msg, "give") && real(_last_msg.give) == 1)
-    {
-        room_goto(Room_End);
-    };
-	if (variable_struct_exists(_last_msg, "iddd") && real(_last_msg.iddd) != 0)
-    {
-		global.endIdentification3 = real(_last_msg.iddd);
-    }
+	    if (variable_struct_exists(_last_msg, "give") && real(_last_msg.give) == 1)
+	    {
+	        room_goto(Room_End);
+	    };
+		if (variable_struct_exists(_last_msg, "iddd") && real(_last_msg.iddd) != 0)
+	    {
+			global.endIdentification3 = real(_last_msg.iddd);
+	    }
+	}
 }
 
 if visible_count > _last_count {

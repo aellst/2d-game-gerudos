@@ -146,7 +146,7 @@ chatDeniseData = {
         line: "I'll be there. Should I bring something?",
         options: [
             { text: "Food would be great", target: "ask_food" },
-            { text: "It would be great, if you could bring some food", target: "clarify" }
+            { text: "It would be great if you could bring some food", target: "bring_food" }
         ]
     },
     "ask_food": {
@@ -154,9 +154,14 @@ chatDeniseData = {
         line: "Food would be great",
         next: "clarify"  
     },
+    "bring_food": {
+        sender: "gray",
+        line: "It would be great if you could bring some food",
+        next: "clarify"  
+    },
     "clarify": {
         sender: "blue",
-        line: "What type of food should i bring? ",
+        line: "What type of food should I bring? ",
         options: [
             { text: "Just bring whatever you like", target: "whatever" },
             { text: "Stella already said she's bringing dessert , so I would say bring something salty maybe?.", target: "salty_food" }
@@ -193,7 +198,7 @@ chatDeniseData = {
 		next: "confirm_to_end"
 	},
 	"dips": {
-		sender: "grey",
+		sender: "gray",
 		line:  "Would be great, if you can also bring some dips and snacks to go with them ",
 		iddd: 2,
 		next: "confirm_to_end"

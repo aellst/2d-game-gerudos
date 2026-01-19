@@ -1,5 +1,7 @@
 var _last_count = visible_count;
 
+if obj_settings_menu.visible == true {exit}
+
 if chat_active {
 	
 	instance_deactivate_object(obj_notification);

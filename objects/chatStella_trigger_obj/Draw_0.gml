@@ -1,3 +1,6 @@
+
+if obj_settings_menu.visible == true {exit}
+
 if (is_active && !is_pressed) {
 	if mouse_check_button_pressed(mb_left) {
 		

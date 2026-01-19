@@ -18,7 +18,7 @@ if (!obj_settings_menu.visible) {
         if (stage < 3) {
             stage += 1;
         } else if (stage == 3) {
-            game_end();
+            game_restart();
         }
     }
 }

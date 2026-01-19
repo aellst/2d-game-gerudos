@@ -16,7 +16,7 @@ for (var i = 0; i < op_length; i++)
         _new_w = max(_new_w, _op_w);
     }
 width = _new_w + op_border*2;
-height = op_border*2 + string_height(option[0, 0]) + (op_length - 1) * op_space; // multiplication?
+height = op_border*2 + string_height(option[0, 0]) + (op_length - 1) * op_space;
 
 //center menu
 x = camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])/2 - width/2;
@@ -32,5 +32,6 @@ for (var i = 0; i < op_length; i++)
         //var _c = c_white;
         //if pos == i {_c = c_yellow};
 		var _draw_y = y + op_border + (i*op_space);
-    draw_text_color(x + op_border, _draw_y, option[menu_level, i], _c, _c, _c, _c, 1);
+		//var _draw_y = y + op_border + i*(string_height(option[menu_level, 0]) + op_space);
+    draw_text_color(x + op_border, y + op_border + op_space*i, option[menu_level, i], _c, _c, _c, _c, 1);
     }

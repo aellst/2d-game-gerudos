@@ -70,7 +70,14 @@ if (showing_options)
 		//if opt_select < 0 opt_select = _total_opts - 1;
 		//if opt_select >= _total_opts opt_select = 0;
 	
-	var _confirm = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter) || mouse_check_button_pressed(mb_left);
+	
+	mouse_right_spot = false
+	if mouse_check_button_pressed(mb_left) {
+		if point_in_rectangle(mouse_x, mouse_y, 350, 0, 1280, 720) {
+			mouse_right_spot = true
+		}
+	}	
+	var _confirm = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter) || mouse_right_spot;
 	
 	if _confirm {
 		var _target_key = _opts[opt_select].target;

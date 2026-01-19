@@ -1,4 +1,11 @@
-accept_key = keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or mouse_check_button_pressed(mb_left);
+mouse_right_spot = false
+if mouse_check_button_pressed(mb_left) {
+	if point_in_rectangle(mouse_x, mouse_y, 350, 0, 1280, 720) {
+		mouse_right_spot = true
+	}
+}
+
+accept_key = keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or mouse_right_spot;
 
 var _cam_x = camera_get_view_x(view_camera[0]);
 var _cam_y = camera_get_view_y(view_camera[0]);

@@ -14,34 +14,49 @@ if (_accept_key) {
 	var _sml = menu_level;
 	
 	switch(menu_level) {
+		//case 0:
+		//	switch(pos) {
+		//		case 0: visible = false; break;
+		//		case 1: menu_level = 1; break;
+		//		case 2: game_end(); break;
+		//	}
+		//	break;
 		case 0:
-			switch(pos) {
-				case 0: visible = false; break;
-				case 1: menu_level = 1; break;
-				case 2: game_end(); break;
-			}
-			break;
-		case 1:
 		switch(pos) {
 				case 0: menu_level = 2; break; 
-	            case 1: break;
+	            case 1: menu_level = 3; break;
 	            case 2: break;
 	            case 3: menu_level = 0; break;
             }
             break;
-		case 2:
+		case 1:
             switch(pos) {
                 case 0: 
                     global.font_random = fnt_standard; 
                     break;
                 case 1: 
                     global.font_random = fnt_dyslexia; 
+					//text_3BD2E03.font = fnt_dyslexia;
+					//text_143E02D.font = fnt_dyslexia;
+					//text_3789BA39.font = fnt_dyslexia;
+					//text_1E7DDBC7.font = fnt_dyslexia;
+					//text_3E97ED6F.font = fnt_dyslexia;
+					//text_629FF2FF.font = fnt_dyslexia;
+					//filler.font = fnt_dyslexia;
+					//text_526DDE3E.font = fnt_dyslexia;
                     break;
                 case 2: 
                     menu_level = 1; 
                     break;
             }
             break;
+		case 2:
+			switch(pos) {
+		        case 0: global.text_speed = 180; break; 
+		        case 1: global.text_speed = 100;  break;
+		        case 2: global.text_speed = 40;    break; 
+			    case 3: menu_level = 1;           break;
+			}
 	}
 	
 	if (_sml != menu_level) pos = 0;

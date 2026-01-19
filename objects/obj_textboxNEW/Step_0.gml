@@ -13,7 +13,7 @@ if chat_active {
 			if timer <= 0
 				{
 				visible_count += 1;
-				timer = 100;
+				timer = global.text_speed;
 		
 				var _last_msg = chatStella[visible_count - 1];
 		

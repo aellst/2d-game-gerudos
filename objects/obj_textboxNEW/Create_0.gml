@@ -269,9 +269,9 @@ chatStellaData = {
 };
 
 //-----------------chat parameters-----------------
-if (!variable_global_exists("text_speed")) {
-	global.text_speed = 100;
-}
+//if (!variable_global_exists("text_speed")) {
+//	global.text_speed = 100;
+//}
 current_node = "start";
 visible_count = 0;
 timer = global.text_speed;

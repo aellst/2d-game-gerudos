@@ -1,4 +1,9 @@
-if obj_settings_menu.visible == true {exit}
+if (instance_exists(obj_settings_menu)) {
+	if (obj_settings_menu.visible || obj_settings_menu.input_delay > 0) {
+		mouse_right_spot = false; 
+        exit;
+    }
+}
 
 if (point_in_rectangle(mouse_x, mouse_y, 111, 286, 338, 347)) {
 	if (mouse_check_button_pressed(mb_left)) {
@@ -28,7 +33,7 @@ if chat_active {
 			if timer <= 0
 				{
 				visible_count += 1;
-				timer = 100;
+				timer = global.text_speed;
 		
 				var _last_msg = chatDan[visible_count - 1];
 		

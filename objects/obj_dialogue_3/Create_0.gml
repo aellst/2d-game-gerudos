@@ -10,16 +10,11 @@ chatDan = [];
 
 chatDanData = {
     "start": {
-        sender: "gray",
-        line: "Hi! Party at mine, you coming?",
-        next: "player_asks_when",
-    },
-    "player_asks_when": {
-        sender: "blue",
-        line: "When?",
-        options: [
+		sender: "blue",
+		line: "Hey, Denise said you were having a party. At what time?",
+		option: [
             { text: "Tonight!", target: "tonight_node" },
-            { text: "At 6, and dinner at 7", target: "dinner_node" }
+            { text: "At 6, and there's dinner at 7", target: "dinner_node" }
         ]
     },
     "tonight_node": {
@@ -29,12 +24,12 @@ chatDanData = {
     },
     "dinner_node": {
         sender: "gray",
-        line: "At 6, and dinner at 7", 
+        line: "At 6, and there's dinner at 7", 
         next: "okay_sure"
     },
     "okay_sure": {
         sender: "blue",
-        line: "Okay, sure!", 
+        line: "Okay, I'm down!", 
         next: "ask_who"
     },
     "when_again" : {
@@ -65,9 +60,14 @@ chatDanData = {
         line: "Who's coming?",
         options: [
             { text: "Our friend group", target: "friend_group" },
-            { text: "Franka, Dan, Denise and Ruben. Ethan and Janiah are out of the country, so they can't come tonight.", target: "specific_friends" },
+            { text: "Franka, Stella and Ruben are also coming. Ethan and Janiah are out of the country, so they can't come tonight.", target: "specific_friends" },
         ]
     },
+	"specific friends": {
+		sender: "gray",
+		line: "Franka, Stella and Ruben are also coming. Ethan and Janiah are out of the country, so they can't come tonight.",
+		next: "confirm_and_ask"
+	},
     "friend_group": {
         sender: "gray",
         line: "Our friend group",

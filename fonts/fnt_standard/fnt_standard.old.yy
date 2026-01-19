@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"font_random",
+  "%Name":"fnt_standard",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":30,
@@ -117,7 +117,7 @@
   "last":0,
   "lineHeight":38,
   "maintainGms1Font":false,
-  "name":"font_random",
+  "name":"fnt_standard",
   "parent":{
     "name":"fonts",
     "path":"folders/fonts.yy",

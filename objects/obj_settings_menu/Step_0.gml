@@ -1,4 +1,4 @@
-//get imput
+/*//get imput
 up_key = keyboard_check_pressed(vk_up);
 down_key = keyboard_check_pressed(vk_down);
 accept_key = keyboard_check_pressed(vk_space);
@@ -66,7 +66,7 @@ if accept_key {
     //correct option lenght
     op_length = array_length(option[menu_level]);
 
-    }
+    }*/
 
 
 

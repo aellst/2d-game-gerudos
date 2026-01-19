@@ -1,5 +1,8 @@
+
+
 if (mouse_check_button_released(mb_left)) {
     if (point_in_rectangle(mouse_x, mouse_y, 368, 454, 652, 500)) {
+		if obj_settings_menu.visible == true {exit}
 		room_goto(Room1);
     }
 	if (mouse_check_button_released(mb_left)) {
@@ -8,6 +11,7 @@ if (mouse_check_button_released(mb_left)) {
 		}
     }
 	    if (point_in_rectangle(mouse_x, mouse_y, 368, 608, 652, 655)) {
+		if obj_settings_menu.visible == true {exit}
 		game_end()
     }
 }
